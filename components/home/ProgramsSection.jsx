@@ -7,20 +7,20 @@ import { programs } from "@/lib/data";
 
 export default function ProgramsSection() {
   return (
-    <section className="py-20 bg-[var(--off-white)]">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-16 sm:py-20 lg:py-28 bg-[var(--off-white)]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* Header */}
-        <div className="text-center mb-14">
+        <div className="text-center mb-10 sm:mb-14">
 
-          {/* Label */}
-          <span className="section-label mb-4 inline-block">
+          <span className="section-label mb-3 sm:mb-4 inline-block">
             Transformative Journeys
           </span>
 
-          {/* Heading */}
-          <h2 className="font-montserrat font-black leading-tight text-[var(--dark)]"
-              style={{ fontSize: "clamp(1.8rem, 3vw, 2.6rem)" }}>
+          <h2
+            className="font-montserrat font-black leading-tight text-[var(--dark)]"
+            style={{ fontSize: "clamp(1.6rem, 4vw, 2.6rem)" }}
+          >
             Coaching Programs{" "}
             <span className="gradient-text">
               Built for Results
@@ -29,80 +29,109 @@ export default function ProgramsSection() {
 
         </div>
 
-        {/* Tabs */}
-        <div className="flex justify-center gap-4 mb-10">
-          <button className="px-6 py-2 rounded-full bg-[var(--orange)] text-white font-montserrat font-semibold shadow">
-            All
-          </button>
-          <button className="px-6 py-2 rounded-full bg-[var(--gray-light)] text-[var(--gray)] font-montserrat font-semibold">
-            Recorded
-          </button>
-          <button className="px-6 py-2 rounded-full bg-[var(--gray-light)] text-[var(--gray)] font-montserrat font-semibold">
-            Live
-          </button>
+        {/* Tabs (Scrollable on mobile) */}
+        <div className="flex justify-start sm:justify-center gap-3 mb-8 sm:mb-10 overflow-x-auto no-scrollbar px-1">
+
+          {["All", "Recorded", "Live"].map((tab, i) => (
+            <button
+              key={i}
+              className={`
+                whitespace-nowrap px-5 py-2 rounded-full 
+                font-montserrat font-semibold text-sm
+                ${
+                  i === 0
+                    ? "bg-[var(--orange)] text-white shadow"
+                    : "bg-[var(--gray-light)] text-[var(--gray)]"
+                }
+              `}
+            >
+              {tab}
+            </button>
+          ))}
+
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
+
           {programs.map((prog) => (
             <div
               key={prog.slug}
-              className="bg-white rounded-2xl border border-[var(--gray-border)] shadow-sm overflow-hidden flex flex-col"
+              className="
+                bg-white rounded-2xl 
+                border border-[var(--gray-border)] 
+                shadow-sm overflow-hidden 
+                flex flex-col
+                hover:shadow-lg transition
+              "
             >
+
               {/* Image */}
-              <div className="h-48 w-full overflow-hidden">
+              <div className="h-44 sm:h-48 w-full overflow-hidden">
                 <Image
                   src={prog.image}
                   alt={prog.title}
                   width={600}
                   height={350}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover hover:scale-105 transition duration-300"
                 />
               </div>
 
               {/* Content */}
-              <div className="p-6 flex flex-col gap-3 flex-1">
+              <div className="p-4 sm:p-6 flex flex-col gap-3 flex-1">
 
-                <h3 className="text-xl font-montserrat font-bold text-[var(--dark)]">
+                <h3 className="text-base sm:text-lg lg:text-xl font-montserrat font-bold text-[var(--dark)]">
                   {prog.title}
                 </h3>
 
-                <p className="text-sm text-[var(--gray)] font-inter leading-relaxed line-clamp-2">
+                <p className="text-xs sm:text-sm text-[var(--gray)] font-inter leading-relaxed line-clamp-2">
                   {prog.description}
                 </p>
 
-                <div className="flex items-center gap-6 text-sm text-[var(--gray)] mt-1">
-                  <span className="flex items-center gap-2">
-                    <BookOpen size={16} className="text-[var(--dark)]" />
+                <div className="flex items-center gap-4 sm:gap-6 text-xs sm:text-sm text-[var(--gray)] mt-1">
+                  <span className="flex items-center gap-1 sm:gap-2">
+                    <BookOpen size={14} className="text-[var(--dark)]" />
                     {prog.lessons}
                   </span>
 
-                  <span className="flex items-center gap-2">
-                    <Clock size={16} className="text-[var(--dark)]" />
+                  <span className="flex items-center gap-1 sm:gap-2">
+                    <Clock size={14} className="text-[var(--dark)]" />
                     {prog.duration}
                   </span>
                 </div>
 
                 {/* Price + Buttons */}
                 <div className="mt-auto pt-4">
-                  <p className="text-lg font-montserrat font-bold text-[var(--dark)] mb-4">
+
+                  <p className="text-base sm:text-lg font-montserrat font-bold text-[var(--dark)] mb-3 sm:mb-4">
                     ₹ {prog.price}
                   </p>
 
-                  <div className="flex justify-between items-center">
-                    <Link href={`/programs/${prog.slug}`} className="btn-secondary">
+                  {/* Buttons responsive */}
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-2">
+
+                    <Link
+                      href={`/programs/${prog.slug}`}
+                      className="btn-secondary w-full text-center justify-center text-sm py-2"
+                    >
                       Explore
                     </Link>
 
-                    <Link href={`/programs/${prog.slug}`} className="btn-primary">
+                    <Link
+                      href={`/programs/${prog.slug}`}
+                      className="btn-primary w-full text-center justify-center text-sm py-2"
+                    >
                       Enroll Now →
                     </Link>
+
                   </div>
+
                 </div>
 
               </div>
             </div>
           ))}
+
         </div>
 
       </div>

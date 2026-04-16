@@ -11,6 +11,12 @@ import CTASection from "@/components/home/CTASection";
 import { buildMetadata } from "@/utils/seoConfig";
 import StatsSection from "@/components/home/StatsSection";
 import Testimonials from "@/components/home/Testimonials";
+import SocialPresence from "@/components/home/SocialPresence";
+import ClientsSection from "@/components/home/ClientsSection";
+import ContactSection from "@/components/home/ContactSection";
+import AboutCoachSection from "@/components/home/AboutCoachSection";
+import FreeHelpSection from "@/components/home/FreeHelpSection";
+import FeaturedInSection from "@/components/home/FeaturedInSection";
 
 export const metadata = buildMetadata("home");
 
@@ -26,13 +32,21 @@ export default function HomePage() {
       <ProgramsSection />
 
       {/* 3. About — dark section, personal brand */}
-      <AboutPreview />
-
-
+      {/* <AboutPreview /> */}
       <Testimonials/>
 
       {/* 4. Clients strip — infinite scroll logos */}
       <ClientsStrip />
+
+      <SocialPresence/>
+
+      <ClientsSection/>
+
+      <FeaturedInSection/>
+
+      <ContactSection/>
+
+      <AboutCoachSection/>
 
       {/* 5. Why choose — value propositions */}
       <WhySection />
@@ -44,13 +58,15 @@ export default function HomePage() {
       <EventsPreview />
 
       {/* 8. Media / Featured In — dark strip */}
-      <MediaStrip />
+      {/* <MediaStrip /> */}
 
       {/* 9. Blog */}
       <BlogPreview />
 
+      <FreeHelpSection/>
+
       {/* 10. CTA */}
-      <CTASection />
+      {/* <CTASection /> */}
     </>
   );
 }
