@@ -1,0 +1,130 @@
+import { buildMetadata, getBreadcrumbSchema } from "@/utils/seoConfig";
+import { galleryItems, coachInfo } from "@/lib/data";
+import Image from "next/image";
+import { FaWhatsapp } from "react-icons/fa";
+
+export const metadata = buildMetadata("gallery");
+
+const categories = ["All", "Events", "Clients", "Media"];
+
+export default function GalleryPage() {
+  const breadcrumb = getBreadcrumbSchema([
+    { name: "Home", href: "/" },
+    { name: "Gallery", href: "/gallery" },
+  ]);
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
+
+      {/* Hero */}
+      <section className="pt-32 pb-16 bg-white text-center px-6">
+        <div className="max-w-3xl mx-auto">
+          <span className="section-label mb-5 inline-flex">Gallery</span>
+          <h1
+            className="font-montserrat font-extrabold leading-tight mb-5"
+            style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: "#0F172A" }}
+          >
+            Moments of{" "}
+            <span className="gradient-text-orange">Transformation</span>
+          </h1>
+          <p className="text-slate-500 font-inter text-lg">
+            A glimpse into the energy, learning, and breakthroughs from Arnav Patil&apos;s masterclasses and coaching sessions.
+          </p>
+        </div>
+      </section>
+
+      {/* Gallery grid */}
+      <section className="pb-24 bg-[#F8FAFC]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          {/* Category filter — static (add interactivity with client component if needed) */}
+          <div className="flex flex-wrap gap-3 mb-10 justify-center">
+            {categories.map((cat) => (
+              <span
+                key={cat}
+                className={`px-5 py-2 rounded-full text-sm font-medium cursor-pointer transition-all font-inter ${
+                  cat === "All"
+                    ? "bg-[#F97316] text-white shadow-sm"
+                    : "bg-white border border-slate-200 text-slate-600 hover:border-[#F97316] hover:text-[#F97316]"
+                }`}
+              >
+                {cat}
+              </span>
+            ))}
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {galleryItems.map((item) => (
+              <div
+                key={item.id}
+                className="group relative rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 aspect-square bg-white border border-slate-100"
+              >
+                <div
+                  className="absolute inset-0 flex flex-col items-center justify-center p-8"
+                  style={{
+                    background: item.id % 2 === 0
+                      ? "linear-gradient(145deg, #FFF7ED 0%, #FED7AA 100%)"
+                      : "linear-gradient(145deg, #F0FDFF 0%, #CFFAFE 100%)",
+                  }}
+                >
+                  <Image
+                    src={item.image}
+                    alt={item.caption}
+                    width={200}
+                    height={200}
+                    className="w-32 h-auto object-contain mb-3"
+                  />
+                  <p className="text-slate-500 text-xs text-center font-inter">
+                    Replace with actual photo
+                  </p>
+                </div>
+
+                {/* Hover overlay */}
+                <div className="absolute inset-0 bg-[#0F172A]/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-center">
+                  <span className="text-xs font-semibold text-orange-300 mb-2 font-inter uppercase tracking-wide">
+                    {item.category}
+                  </span>
+                  <p className="text-white font-montserrat font-semibold text-base">{item.caption}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-center text-slate-400 text-sm font-inter mt-10">
+            Add actual event/coaching photos in{" "}
+            <code className="bg-slate-100 px-2 py-0.5 rounded text-[#F97316]">
+              /public/images/
+            </code>
+            {" "}and update <code className="bg-slate-100 px-2 py-0.5 rounded text-[#F97316]">lib/data.js</code> galleryItems.
+          </p>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 bg-white text-center px-6">
+        <h2 className="font-montserrat font-extrabold text-2xl text-[#0F172A] mb-4">
+          Follow Arnav on Instagram for More
+        </h2>
+        <p className="text-slate-500 font-inter mb-8">
+          Stay updated with the latest events, client stories, and business insights.
+        </p>
+        <div className="flex justify-center gap-4 flex-wrap">
+          <a
+            href={coachInfo.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary inline-flex"
+          >
+            Follow @coacharnavpatil
+          </a>
+          <a href={coachInfo.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-secondary inline-flex">
+            <FaWhatsapp size={16} /> WhatsApp
+          </a>
+        </div>
+      </section>
+    </>
+  );
+}
