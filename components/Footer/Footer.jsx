@@ -302,6 +302,15 @@ export default function Footer() {
                   </div>
                   {coachInfo.email}
                 </a>
+                <a
+                  href={`mailto:${coachInfo.email}`}
+                  className="flex items-center gap-3 text-slate-400 hover:text-[#F97316] text-sm transition-colors break-all"
+                >
+                  <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-white/5 flex-shrink-0">
+                    <FaEnvelope size={12} className="text-[#0891B2]" />
+                  </div>
+                  {coachInfo.email2}
+                </a>
               </li>
               <li>
                 <span className="flex items-center gap-3 text-slate-400 text-sm">

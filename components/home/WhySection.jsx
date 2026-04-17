@@ -46,7 +46,7 @@ export default function WhySection() {
               {/* Hover accent */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#F97316] to-[#0891B2] scale-x-0 group-hover:scale-x-100 transition-transform duration-400 origin-left" />
 
-              <div className="text-4xl mb-5">{item.icon}</div>
+              {/* <div className="text-4xl mb-5">{item.icon}</div> */}
               <h3 className="font-montserrat font-black text-lg text-[#0B0F1A] mb-3 group-hover:text-[#F97316] transition-colors duration-200">
                 {item.title}
               </h3>

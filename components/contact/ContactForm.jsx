@@ -292,7 +292,9 @@ export default function ContactForm() {
           className="mt-1 w-4 h-4 rounded border-[var(--gray-border)] text-[var(--orange)] focus:ring-[var(--orange)] focus:ring-2 cursor-pointer"
         />
         <label className="text-xs text-[var(--gray)] font-inter leading-relaxed cursor-pointer">
-          By clicking this, you agree to disclose your personal information to <span className="font-semibold text-[var(--orange)]">Arnasoft Solutions</span> for contacting you via mail or text for further assistance.
+            
+
+          By clicking this, you agree to disclose your personal information to <span className="font-semibold text-[var(--orange)]">Arnasoft Solutions</span> for contacting you via SMS, Email, RCS Messages, Calls and WhatsApp.
         </label>
       </div>
 

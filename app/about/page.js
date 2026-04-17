@@ -242,12 +242,13 @@ export default function AboutPage() {
             <div className="text-center lg:text-left order-2 lg:order-1">
               <span className="section-label mb-4 sm:mb-5 inline-flex">About the Coach</span>
               <h1
-                className="font-montserrat font-extrabold leading-tight tracking-tight mb-4 sm:mb-6"
-                style={{ fontSize: "clamp(1.8rem, 5vw, 3.2rem)", color: "#0F172A" }}
-              >
-                Meet{" "}
-                <span className="gradient-text">Mr. Arnav Patil</span>
-              </h1>
+  className="font-montserrat font-extrabold leading-tight tracking-tight mb-4 sm:mb-6"
+  style={{ fontSize: "clamp(1.8rem, 5vw, 3rem)", color: "#0F172A" }}
+>
+  Meet{" "}
+  <span className="gradient-text">Mr. Arnav Patil</span>{" "}
+  <span className="text-slate-500">(Arnasoft Solutions)</span>
+</h1>
               <p className="text-base sm:text-lg md:text-xl text-slate-500 font-inter mb-3 sm:mb-4">
                 {coachInfo.title}
               </p>
@@ -400,7 +401,7 @@ export default function AboutPage() {
           key={i}
           className="p-5 sm:p-7 rounded-3xl border border-slate-100 hover:border-orange-100 hover:shadow-md transition-all duration-300"
         >
-          <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">{item.icon}</div>
+          {/* <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">{item.icon}</div> */}
           <h3 className="font-montserrat font-bold text-base sm:text-lg text-[#0F172A] mb-2">
             {item.title}
           </h3>

@@ -252,7 +252,12 @@ export default function ContactPage() {
                       <a href={`mailto:${coachInfo.email}`} className="text-sm font-medium text-[var(--dark)] hover:text-[var(--orange)] transition-colors font-inter">
                         {coachInfo.email}
                       </a>
+                       <p className="text-xs text-[var(--gray)] font-inter"></p>
+                      <a href={`mailto:${coachInfo.email}`} className="text-sm font-medium text-[var(--dark)] hover:text-[var(--orange)] transition-colors font-inter">
+                        {coachInfo.email2}
+                      </a>
                     </div>
+                    
                   </div>
 
                   {/* Phone */}
