@@ -111,7 +111,7 @@ export default function ProgramsSection() {
   <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
 
   <Link
-    href={`/programs/${prog.slug}`}
+    href={`${prog.link}`}
     className="btn-secondary w-full sm:w-auto flex-1 text-center flex items-center justify-center text-xs sm:text-sm py-2 sm:py-2.5"
   >
     Explore

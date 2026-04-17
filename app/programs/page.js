@@ -20,27 +20,28 @@ export default function ProgramsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
       />
 
-      {/* Hero */}
-      <section className="pt-32 pb-16 bg-white text-center px-6">
+      {/* Hero Section */}
+      <section className="pt-28 sm:pt-32 pb-12 sm:pb-16 bg-white text-center px-4 sm:px-6">
         <div className="max-w-3xl mx-auto">
-          <span className="section-label mb-5 inline-flex">Our Programs</span>
+          <span className="section-label mb-4 sm:mb-5 inline-flex">Our Programs</span>
           <h1
-            className="font-montserrat font-extrabold leading-tight tracking-tight mb-5"
-            style={{ fontSize: "clamp(2rem, 4.5vw, 3.2rem)", color: "#0F172A" }}
+            className="font-montserrat font-extrabold leading-tight tracking-tight mb-4 sm:mb-5"
+            style={{ fontSize: "clamp(1.8rem, 5vw, 3.2rem)", color: "#0F172A" }}
           >
             Coaching Programmes{" "}
-            <span className="gradient-text-orange">Built for Results</span>
+            <span className="gradient-text">Built for Results</span>
           </h1>
-          <p className="text-slate-500 text-lg font-inter max-w-2xl mx-auto">
-            Every programme is crafted from 10+ years of real-world business transformation. Choose what fits your stage and start growing.
+          <p className="text-slate-500 text-base sm:text-lg font-inter max-w-2xl mx-auto px-2">
+            Every programme is crafted from 10+ years of real-world business transformation. 
+            Choose what fits your stage and start growing with <span className="font-semibold text-[#F97316]">Arnasoft Solutions</span>.
           </p>
         </div>
       </section>
 
-      {/* Programs grid */}
-      <section className="pb-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8">
+      {/* Programs Grid Section */}
+      <section className="pb-16 sm:pb-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
             {programs.map((prog, i) => (
               <div
                 key={prog.slug}
@@ -55,11 +56,12 @@ export default function ProgramsPage() {
                       : "linear-gradient(90deg, #0891B2, #06B6D4)",
                   }}
                 />
-                <div className="p-8 flex flex-col flex-1">
+                
+                <div className="p-5 sm:p-6 md:p-8 flex flex-col flex-1">
                   {/* Icon + badge */}
-                  <div className="flex items-center gap-3 mb-5">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-4 sm:mb-5">
                     <div
-                      className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl shadow-sm"
+                      className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center text-xl sm:text-2xl shadow-sm"
                       style={{
                         background: i % 2 === 0
                           ? "linear-gradient(135deg, #FFF7ED, #FED7AA)"
@@ -69,7 +71,7 @@ export default function ProgramsPage() {
                       {prog.icon}
                     </div>
                     <span
-                      className={`text-xs font-semibold px-3 py-1.5 rounded-full ${
+                      className={`text-xs font-semibold px-3 py-1.5 rounded-full self-start sm:self-center ${
                         prog.badge === "Flagship"
                           ? "bg-orange-100 text-orange-700"
                           : prog.badge === "Most Popular"
@@ -83,50 +85,58 @@ export default function ProgramsPage() {
                     </span>
                   </div>
 
-                  <h2 className="font-montserrat font-bold text-2xl text-[#0F172A] mb-2">{prog.title}</h2>
-                  <p className="text-[#F97316] text-sm font-medium font-inter mb-4">{prog.tagline}</p>
-                  <p className="text-slate-500 text-sm leading-relaxed font-inter mb-6">{prog.description}</p>
+                  <h2 className="font-montserrat font-bold text-xl sm:text-2xl text-[#0F172A] mb-1 sm:mb-2">
+                    {prog.title}
+                  </h2>
+                  <p className="text-[#F97316] text-xs sm:text-sm font-medium font-inter mb-3 sm:mb-4">
+                    {prog.tagline}
+                  </p>
+                  <p className="text-slate-500 text-xs sm:text-sm leading-relaxed font-inter mb-4 sm:mb-6">
+                    {prog.description}
+                  </p>
 
-                  {/* Meta */}
-                  <div className="grid grid-cols-3 gap-3 mb-6 p-4 bg-[#F8FAFC] rounded-2xl">
+                  {/* Meta Info Cards */}
+                  <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-5 sm:mb-6 p-3 sm:p-4 bg-[#F8FAFC] rounded-2xl">
                     {[
                       { icon: Clock, label: "Duration", val: prog.duration },
                       { icon: Globe, label: "Mode", val: prog.mode },
-                      { icon: Users, label: "For", val: prog.audience.split(",")[0] },
+                      { icon: Users, label: "For", val: prog.audience?.split(",")[0] || "All Levels" },
                     ].map(({ icon: Icon, label, val }) => (
                       <div key={label} className="text-center">
-                        <Icon size={15} className="mx-auto mb-1 text-[#F97316]" />
-                        <div className="text-xs text-slate-400 font-inter">{label}</div>
-                        <div className="text-xs font-semibold text-slate-700 font-inter mt-0.5">{val}</div>
+                        <Icon size={14} className="mx-auto mb-1 text-[#F97316]" />
+                        <div className="text-[10px] sm:text-xs text-slate-400 font-inter">{label}</div>
+                        <div className="text-[10px] sm:text-xs font-semibold text-slate-700 font-inter mt-0.5 leading-tight">
+                          {val}
+                        </div>
                       </div>
                     ))}
                   </div>
 
-                  {/* Highlights */}
-                  <ul className="space-y-2.5 mb-7 flex-1">
-                    {prog.highlights.map((h, j) => (
-                      <li key={j} className="flex items-center gap-2.5 text-sm text-slate-600 font-inter">
-                        <CheckCircle2 size={16} className="text-[#F97316] flex-shrink-0" fill="rgba(249,115,22,0.1)" />
-                        {h}
+                  {/* Highlights List */}
+                  <ul className="space-y-2 sm:space-y-2.5 mb-5 sm:mb-7 flex-1">
+                    {prog.highlights?.slice(0, 4).map((h, j) => (
+                      <li key={j} className="flex items-start gap-2 text-xs sm:text-sm text-slate-600 font-inter">
+                        <CheckCircle2 size={14} className="text-[#F97316] flex-shrink-0 mt-0.5" />
+                        <span>{h}</span>
                       </li>
                     ))}
                   </ul>
 
-                  {/* CTAs */}
-                  <div className="flex gap-3 flex-wrap">
+                  {/* CTA Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-3">
                     <Link
                       href={`/programs/${prog.slug}`}
-                      className="btn-primary flex-1 justify-center"
+                      className="btn-primary flex-1 text-center justify-center text-sm sm:text-base py-2.5 sm:py-3"
                     >
-                      Learn More <ArrowRight size={15} />
+                      Learn More <ArrowRight size={14} className="inline ml-1" />
                     </Link>
                     <a
                       href={coachInfo.whatsapp}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn-teal flex-1 justify-center"
+                      className="btn-secondary flex-1 text-center justify-center text-sm sm:text-base py-2.5 sm:py-3"
                     >
-                      <FaWhatsapp size={15} /> Enquire
+                      <FaWhatsapp size={14} className="inline mr-2" /> Enquire Now
                     </a>
                   </div>
                 </div>
@@ -136,18 +146,97 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-[#0F172A] text-center px-6">
-        <h2 className="font-montserrat font-extrabold text-3xl text-white mb-4">
-          Not Sure Which Program Is Right?
-        </h2>
-        <p className="text-slate-400 font-inter mb-8 max-w-xl mx-auto">
-          Connect with Arnav Sir directly on WhatsApp for a free consultation and personalised recommendation.
-        </p>
-        <a href={coachInfo.whatsapp} target="_blank" rel="noopener noreferrer" className="btn-primary inline-flex">
-          <FaWhatsapp size={17} /> Get a Free Recommendation
-        </a>
+      {/* Why Choose Arnasoft Section */}
+      <section className="py-16 sm:py-20 bg-orange-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10 sm:mb-14">
+            <span className="section-label mb-3 sm:mb-4 inline-flex">Why Choose Us</span>
+            <h2
+              className="font-montserrat font-extrabold leading-tight px-2"
+              style={{ fontSize: "clamp(1.5rem, 4vw, 2.4rem)", color: "#0F172A" }}
+            >
+              The <span className="gradient-text">Arnasoft</span> Advantage
+            </h2>
+            <p className="text-slate-600 text-sm sm:text-base font-inter mt-3 max-w-2xl mx-auto">
+              What makes our coaching programs different and effective
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+            {[
+              {
+                icon: "🎯",
+                title: "Proven Framework",
+                desc: "10+ years of real-world business experience"
+              },
+              {
+                icon: "💡",
+                title: "Practical Insights",
+                desc: "Actionable strategies you can implement immediately"
+              },
+              {
+                icon: "🤝",
+                title: "Personal Mentorship",
+                desc: "Direct access to Arnav Sir for guidance"
+              },
+              {
+                icon: "📈",
+                title: "Track Record",
+                desc: "1000+ successful clients transformed"
+              }
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-white p-5 sm:p-6 rounded-2xl text-center hover:shadow-lg transition-all duration-300"
+              >
+                <div className="text-3xl sm:text-4xl mb-3">{item.icon}</div>
+                <h3 className="font-montserrat font-bold text-[#0F172A] text-sm sm:text-base mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-slate-500 text-xs sm:text-sm font-inter">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
+
+      {/* Brand Showcase Section */}
+      <section className="py-12 sm:py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-flex items-center gap-2 bg-orange-50 rounded-full px-4 sm:px-6 py-2 sm:py-3 shadow-sm mb-6">
+            <span className="text-xs sm:text-sm font-semibold text-[#F97316]">Powered by Excellence</span>
+          </div>
+          <h3 className="font-montserrat font-black text-2xl sm:text-3xl md:text-4xl text-[#0F172A] mb-3">
+            Arnasoft <span className="gradient-text">Solutions</span>
+          </h3>
+          <p className="text-slate-600 text-sm sm:text-base font-inter max-w-2xl mx-auto">
+            Transforming businesses through innovative coaching and digital solutions
+          </p>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 sm:py-20 bg-orange-50 text-center px-4 sm:px-6">
+  <div className="max-w-3xl mx-auto">
+    <h2 className="font-montserrat font-extrabold text-2xl sm:text-3xl text-[#0F172A] mb-3 sm:mb-4">
+      Not Sure Which Program Is Right?
+    </h2>
+    <p className="text-slate-600 text-sm sm:text-base font-inter mb-6 sm:mb-8 max-w-xl mx-auto px-4">
+      Connect with Arnav Sir directly on WhatsApp for a free consultation 
+      and personalised recommendation.
+    </p>
+    <a 
+      href={coachInfo.whatsapp} 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="btn-primary inline-flex items-center justify-center text-sm sm:text-base py-3 sm:py-3.5 px-6 sm:px-8"
+    >
+      <FaWhatsapp size={17} className="mr-2" /> Get a Free Recommendation
+    </a>
+  </div>
+</section>
     </>
   );
 }

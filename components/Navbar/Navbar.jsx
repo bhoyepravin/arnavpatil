@@ -109,14 +109,15 @@ export default function Navbar() {
     <FaInstagram size={15} />
   </a> */}
 
-  {/* Phone */}
   <a
   href={`tel:${coachInfo.phone}`}
   className={`flex items-center gap-1.5 px-3.5 py-2 rounded-lg 
   text-[0.9rem] font-extrabold transition-all duration-200 ${
     scrolled
       ? "text-slate-800 hover:text-[#0891B2]"   // after scroll (dark)
-      : "text-white/90 hover:text-[#0891B2]"    // before scroll (white)
+      : isHomePage
+        ? "text-white/90 hover:text-[#0891B2]"   // before scroll on homepage (white)
+        : "text-slate-800 hover:text-[#0891B2]"  // before scroll on other pages (dark)
   }`}
 >
   <Phone size={13} />
