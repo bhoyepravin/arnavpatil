@@ -13,6 +13,8 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
 
+   const isHomePage = pathname === '/';
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -70,16 +72,24 @@ export default function Navbar() {
 
                 return (
                   <Link
-                    key={item.href}
-                    href={item.href}
-                    className={`text-[1rem] font-semibold transition-all ${
-                      isActive
-                        ? "text-[#1E293B]"
-                        : "text-slate-800 hover:text-[#F97316]"
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
+  key={item.href}
+  href={item.href}
+  className={`text-[1rem] font-semibold transition-all ${
+    isActive
+      ? scrolled
+        ? "text-[#1E293B]"     // active when scrolled
+        : isHomePage 
+          ? "text-white"         // active on homepage top
+          : "text-[#1E293B]"     // active on other pages top
+      : scrolled
+        ? "text-slate-800 hover:text-[#0891B2]"
+        : isHomePage
+          ? "text-white/90 hover:text-[#0891B2]"
+          : "text-slate-800 hover:text-[#0891B2]"
+  }`}
+>
+  {item.label}
+</Link>
                 );
               })}
             </div>
@@ -87,37 +97,47 @@ export default function Navbar() {
             {/* Right Side — Phone + Book Call + Login */}
             <div className="hidden lg:flex items-center gap-3">
 
-              {/* Instagram */}
-              <a
-                href={coachInfo.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 flex items-center justify-center rounded-full hover:border-[#F97316] hover:text-[#F97316] text-slate-500 transition-all duration-200"
-              >
-                <FaInstagram size={15} />
-              </a>
+  {/* Instagram */}
+  {/* <a
+    href={coachInfo.instagram}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-9 h-9 flex items-center justify-center rounded-full 
+    text-slate-500 hover:text-[#F97316] hover:bg-orange-50
+    transition-all duration-200"
+  >
+    <FaInstagram size={15} />
+  </a> */}
 
-              {/* Phone */}
-              <a
-                href={`tel:${coachInfo.phone}`}
-                className="flex items-center gap-1.5 px-3.5 py-2 rounded-lg  hover:border-[#0891B2] hover:text-[#0891B2] text-slate-600 text-[0.8rem] font-medium transition-all duration-200"
-              >
-                <Phone size={13} />
-                {coachInfo.phone}
-              </a>
+  {/* Phone */}
+  <a
+  href={`tel:${coachInfo.phone}`}
+  className={`flex items-center gap-1.5 px-3.5 py-2 rounded-lg 
+  text-[0.9rem] font-extrabold transition-all duration-200 ${
+    scrolled
+      ? "text-slate-800 hover:text-[#0891B2]"   // after scroll (dark)
+      : "text-white/90 hover:text-[#0891B2]"    // before scroll (white)
+  }`}
+>
+  <Phone size={13} />
+  {coachInfo.phone}
+</a>
 
-              {/* Book Free Call */}
-              <a
-                href={coachInfo.whatsapp}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#F97316] text-white text-[0.85rem] font-semibold hover:bg-[#EA6A0A] transition-all duration-200 shadow-sm shadow-orange-200"
-              >
-                <FaWhatsapp size={15} />
-                Book Free Call
-              </a>
+  {/* Book Free Call */}
+  <a
+    href={coachInfo.whatsapp}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 px-5 py-2.5 rounded-xl 
+    bg-[#F97316] text-white text-[0.85rem] font-semibold 
+    hover:bg-[#EA6A0A] hover:scale-[1.03]
+    transition-all duration-200 shadow-md shadow-orange-200"
+  >
+    <FaWhatsapp size={15} />
+    Book Free Call
+  </a>
 
-            </div>
+</div>
 
             {/* Mobile Hamburger */}
             <button

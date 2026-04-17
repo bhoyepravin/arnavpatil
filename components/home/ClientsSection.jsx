@@ -21,7 +21,7 @@ export default function ClientsSection() {
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600')",
+            "url('/herosection/arnav_patil_sir_07.webp')",
         }}
       />
       <div className="absolute inset-0 bg-black/70" />

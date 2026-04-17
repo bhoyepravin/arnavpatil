@@ -32,7 +32,7 @@ export default function ContactPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }} />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-white text-center px-6">
+      <section className="pt-26 pb-16 bg-white text-center px-6">
         <div className="max-w-2xl mx-auto">
           <span className="section-label mb-5 inline-flex">Contact Us</span>
           <h1

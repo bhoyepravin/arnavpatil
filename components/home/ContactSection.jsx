@@ -2,7 +2,7 @@
 
 export default function ContactSection() {
   return (
-    <section className="w-full py-16 sm:py-20 lg:py-28 bg-[var(--off-white)]">
+    <section className="w-full py-16 sm:py-20 lg:py-28 bg-[var(--off-white)] pt-[-10]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
@@ -10,7 +10,7 @@ export default function ContactSection() {
           {/* LEFT IMAGE */}
           <div className="w-full h-[260px] sm:h-[350px] lg:h-[500px] rounded-2xl overflow-hidden shadow-xl">
             <img
-              src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1200"
+              src="/contactus/contact_us_page.webp"
               alt="consulting"
               className="w-full h-full object-cover"
             />

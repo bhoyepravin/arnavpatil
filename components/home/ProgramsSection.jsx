@@ -103,30 +103,30 @@ export default function ProgramsSection() {
                 {/* Price + Buttons */}
                 <div className="mt-auto pt-4">
 
-                  <p className="text-base sm:text-lg font-montserrat font-bold text-[var(--dark)] mb-3 sm:mb-4">
-                    ₹ {prog.price}
-                  </p>
+  {/* <p className="text-base sm:text-lg font-montserrat font-bold text-[var(--dark)] mb-3 sm:mb-4">
+    ₹ {prog.price}
+  </p> */}
 
-                  {/* Buttons responsive */}
-                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-2">
+  {/* Buttons responsive */}
+  <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
 
-                    <Link
-                      href={`/programs/${prog.slug}`}
-                      className="btn-secondary w-full text-center justify-center text-sm py-2"
-                    >
-                      Explore
-                    </Link>
+  <Link
+    href={`/programs/${prog.slug}`}
+    className="btn-secondary w-full sm:w-auto flex-1 text-center flex items-center justify-center text-xs sm:text-sm py-2 sm:py-2.5"
+  >
+    Explore
+  </Link>
 
-                    <Link
-                      href={`/programs/${prog.slug}`}
-                      className="btn-primary w-full text-center justify-center text-sm py-2"
-                    >
-                      Enroll Now →
-                    </Link>
+  <Link
+    href={`${prog.contact}`}
+    className="btn-primary w-full sm:w-auto flex-1 text-center flex items-center justify-center text-xs sm:text-sm py-2 sm:py-2.5"
+  >
+    Enroll Now 
+  </Link>
 
-                  </div>
+</div>
 
-                </div>
+</div>
 
               </div>
             </div>

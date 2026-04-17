@@ -254,29 +254,29 @@ import { useState, useEffect } from "react";
 const sliderData = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2074&auto=format",
-    mobileImage: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format",
+    image: "/herosection/arnav_patil_sir_01.webp",
+    mobileImage: "/herosection/arnav_patil_sir_01.webp",
     title: "Transform Your Business",
     subtitle: "Transform Your Life"
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format",
-    mobileImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format",
+    image: "/herosection/arnav_patil_sir_02.webp",
+    mobileImage: "/herosection/arnav_patil_sir_02.webp",
     title: "Scale Your Business",
     subtitle: "To New Heights"
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format",
-    mobileImage: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=800&auto=format",
+    image: "/herosection/arnav_patil_sir_03.webp",
+    mobileImage: "/herosection/arnav_patil_sir_03.webp",
     title: "Become The Leader",
     subtitle: "You Were Meant To Be"
   },
   {
     id: 4,
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format",
-    mobileImage: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format",
+    image: "/herosection/arnav_patil_sir_04.webp",
+    mobileImage: "/herosection/arnav_patil_sir_04.webp",
     title: "Strategic Growth",
     subtitle: "Global Success"
   }
@@ -385,7 +385,7 @@ export default function HeroSection() {
                 alt={slide.title}
                 fill
                 priority
-                className="object-cover"
+                className="object-fit"
                 unoptimized
               />
             </motion.div>
@@ -393,8 +393,8 @@ export default function HeroSection() {
         </AnimatePresence>
 
         {/* Dark Overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-black/30 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
 
         {/* Navigation Arrows */}
         {sliderData.length > 1 && (

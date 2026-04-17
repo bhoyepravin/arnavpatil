@@ -6,15 +6,15 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 const testimonials = [
   {
     id: 1,
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    video: "https://www.youtube.com/embed/oSzMps4GhcQ",
   },
   {
     id: 2,
-    video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    video: "https://www.youtube.com/embed/_YszSMpla3s",
   },
   {
     id: 3,
-    video: "https://samplelib.com/lib/preview/mp4/sample-5s.mp4",
+    video: "https://www.youtube.com/embed/RUt9ZFntWq4",
   },
 ];
 
@@ -61,29 +61,26 @@ export default function Testimonials() {
           <div className="absolute w-full max-w-2xl h-full bg-[var(--orange-pale)] blur-2xl opacity-40 rounded-3xl" />
 
           {/* Video Card */}
-          <video
-            key={testimonials[current].id}
-            controls
-            className="
-              relative z-10
-              w-full 
-              max-w-xl 
-              sm:max-w-2xl 
-              h-[220px] 
-              sm:h-[320px] 
-              md:h-[420px] 
-              lg:h-[500px] 
-              object-cover 
-              rounded-2xl sm:rounded-3xl 
-              shadow-[0_20px_60px_rgba(0,0,0,0.15)]
-              border border-[var(--gray-border)]
-              bg-black
-              transition duration-300
-              hover:scale-[1.01]
-            "
-          >
-            <source src={testimonials[current].video} type="video/mp4" />
-          </video>
+          <iframe
+  key={testimonials[current].id}
+  src={testimonials[current].video}
+  className="
+    relative z-10
+    w-full 
+    max-w-xl 
+    sm:max-w-2xl 
+    h-[220px] 
+    sm:h-[320px] 
+    md:h-[420px] 
+    lg:h-[500px] 
+    rounded-2xl sm:rounded-3xl 
+    shadow-[0_20px_60px_rgba(0,0,0,0.15)]
+    border border-[var(--gray-border)]
+    bg-black
+  "
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+/>
 
           {/* Arrows */}
           <div className="absolute inset-0 flex items-center justify-between px-2 sm:px-4 z-20">

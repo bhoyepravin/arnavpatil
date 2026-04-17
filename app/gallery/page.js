@@ -41,7 +41,7 @@ export default function GalleryPage() {
       <section className="pb-24 bg-[#F8FAFC]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Category filter — static (add interactivity with client component if needed) */}
-          <div className="flex flex-wrap gap-3 mb-10 justify-center">
+          {/* <div className="flex flex-wrap gap-3 mb-10 justify-center">
             {categories.map((cat) => (
               <span
                 key={cat}
@@ -54,52 +54,43 @@ export default function GalleryPage() {
                 {cat}
               </span>
             ))}
-          </div>
+          </div> */}
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {galleryItems.map((item) => (
-              <div
-                key={item.id}
-                className="group relative rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 aspect-square bg-white border border-slate-100"
-              >
-                <div
-                  className="absolute inset-0 flex flex-col items-center justify-center p-8"
-                  style={{
-                    background: item.id % 2 === 0
-                      ? "linear-gradient(145deg, #FFF7ED 0%, #FED7AA 100%)"
-                      : "linear-gradient(145deg, #F0FDFF 0%, #CFFAFE 100%)",
-                  }}
-                >
-                  <Image
-                    src={item.image}
-                    alt={item.caption}
-                    width={200}
-                    height={200}
-                    className="w-32 h-auto object-contain mb-3"
-                  />
-                  <p className="text-slate-500 text-xs text-center font-inter">
-                    Replace with actual photo
-                  </p>
-                </div>
+  {galleryItems.map((item) => (
+    <div
+      key={item.id}
+      className="group relative rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 aspect-square bg-white border border-slate-100"
+    >
+      {/* Full background image */}
+      <div className="absolute inset-0">
+        <Image
+          src={item.image}
+          alt={item.caption}
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-110"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
+        {/* Overlay gradient for better text visibility */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
+      </div>
 
-                {/* Hover overlay */}
-                <div className="absolute inset-0 bg-[#0F172A]/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-center">
-                  <span className="text-xs font-semibold text-orange-300 mb-2 font-inter uppercase tracking-wide">
-                    {item.category}
-                  </span>
-                  <p className="text-white font-montserrat font-semibold text-base">{item.caption}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <p className="text-center text-slate-400 text-sm font-inter mt-10">
-            Add actual event/coaching photos in{" "}
-            <code className="bg-slate-100 px-2 py-0.5 rounded text-[#F97316]">
-              /public/images/
-            </code>
-            {" "}and update <code className="bg-slate-100 px-2 py-0.5 rounded text-[#F97316]">lib/data.js</code> galleryItems.
+      {/* Content overlay */}
+      <div className="absolute inset-0 flex flex-col items-center justify-end p-6 text-center">
+        <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+          <span className="text-xs font-semibold text-orange-300 mb-2 font-inter uppercase tracking-wide inline-block">
+            {item.category}
+          </span>
+          <p className="text-white font-montserrat font-semibold text-base opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            {item.caption}
           </p>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
+          
         </div>
       </section>
 

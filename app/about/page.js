@@ -78,39 +78,39 @@ export default function AboutPage() {
               >
                 <div className="absolute inset-0 flex items-center justify-center p-10">
                   <Image
-                    src="/images/arnavpatil_logo.png"
+                    src="/images/arnav_patil_sir.jpeg"
                     alt="Mr. Arnav Patil — Business Coach"
                     width={260}
                     height={260}
-                    className="w-48 h-auto object-contain"
+                    className="w-85 h-auto object-contain"
                   />
                 </div>
               </div>
               {/* Accent border */}
-              <div className="absolute -bottom-4 -right-4 w-full h-full rounded-3xl border-2 border-[#F97316]/20 pointer-events-none" />
+              <div className="absolute -bottom-8 -right-4 w-full h-115 rounded-3xl border-2 border-[#F97316]/20 pointer-events-none" />
             </div>
           </div>
         </div>
       </section>
 
       {/* Stats */}
-      <section className="py-16 bg-[#0F172A]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {stats.map((stat, i) => (
-              <div key={i}>
-                <div
-                  className="text-4xl font-extrabold font-montserrat mb-2"
-                  style={{ color: i % 2 === 0 ? "#F97316" : "#38BDF8" }}
-                >
-                  {stat.value}
-                </div>
-                <div className="text-slate-400 text-sm font-inter">{stat.label}</div>
-              </div>
-            ))}
+      <section className="py-16 bg-orange-50">
+  <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      {stats.map((stat, i) => (
+        <div key={i}>
+          <div
+            className="text-4xl font-extrabold font-montserrat mb-2"
+            style={{ color: i % 2 === 0 ? "#F97316" : "#38BDF8" }}
+          >
+            {stat.value}
           </div>
+          <div className="text-slate-600 text-sm font-inter">{stat.label}</div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Journey timeline */}
       <section className="py-24 bg-[#F8FAFC]">

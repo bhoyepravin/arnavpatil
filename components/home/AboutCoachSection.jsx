@@ -26,7 +26,7 @@ export default function AboutCoachSection() {
   alt="Arnav Patil"
   fill
   priority
-  className="object-cover"
+  className="object-contain"
   sizes="(max-width: 768px) 100vw, 50vw"
 />
           </div>
