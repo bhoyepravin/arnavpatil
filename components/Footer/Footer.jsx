@@ -348,7 +348,7 @@ export default function Footer() {
         <div className="mt-12 pt-6 border-t border-white/10">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-slate-400 text-xs text-center sm:text-left">
-              &copy; {year} Arnasoft Solutions. All rights reserved.
+              &copy; {year} Arnav Patil. All rights reserved.
             </p>
             
             {/* Legal Links - Bottom Bar */}
