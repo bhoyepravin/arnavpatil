@@ -45,7 +45,7 @@
 
 import { motion } from "framer-motion";
 import { Phone } from "lucide-react";
-import { FaWhatsapp, FaInstagram } from "react-icons/fa";
+import { FaWhatsapp, FaInstagram, FaFacebook } from "react-icons/fa";
 import { coachInfo } from "@/lib/data";
 
 export default function FloatingButtons() {
@@ -83,6 +83,18 @@ export default function FloatingButtons() {
       rel: "noopener noreferrer",
       aria: `Follow ${coachInfo.name} on Instagram`,
     },
+
+    {
+  id: "facebook",
+  icon: <FaFacebook size={24} />,
+  label: "Facebook",
+  href: coachInfo.instagram,
+  bgColor: "bg-[#1877F2]",
+  hoverColor: "hover:brightness-110",
+  target: "_blank",
+  rel: "noopener noreferrer",
+  aria: `Follow ${coachInfo.name} on Instagram`,
+},
   ];
 
   return (

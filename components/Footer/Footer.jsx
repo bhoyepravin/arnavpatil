@@ -170,7 +170,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { FaWhatsapp, FaInstagram, FaPhone, FaEnvelope } from "react-icons/fa";
+import { FaWhatsapp, FaInstagram, FaPhone, FaEnvelope, FaFacebook } from "react-icons/fa";
 import { coachInfo, programs, navItems } from "@/lib/data";
 import { siteSEO } from "@/utils/seoConfig";
 import { MapPin, ArrowRight } from "lucide-react";
@@ -212,6 +212,15 @@ export default function Footer() {
                 aria-label="Instagram"
               >
                 <FaInstagram size={15} />
+              </a>
+              <a
+                href={coachInfo.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 flex items-center justify-center rounded-lg bg-white/5 hover:bg-[#F97316] text-slate-400 hover:text-white transition-all duration-200"
+                aria-label="Instagram"
+              >
+                <FaFacebook size={15} />
               </a>
               <a
                 href={coachInfo.whatsapp}
