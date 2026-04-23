@@ -34,7 +34,7 @@ export default function ClientsSection() {
           <h2 className="text-white font-montserrat font-bold leading-tight
             text-[clamp(1.6rem,4vw,2.8rem)]">
             India’s Best Business Coach who has trained over{" "}
-            <span className="gradient-text">4,00,000+</span> Businessmen
+            <span className="heading">4,00,000+</span> Businessmen
           </h2>
         </div>
 

@@ -209,7 +209,7 @@ export default function ContactPage() {
             className="font-montserrat font-extrabold leading-tight mb-4 sm:mb-5"
             style={{ fontSize: "clamp(1.8rem, 5vw, 3rem)", color: "var(--dark)" }}
           >
-            Let's Start Your{" "} <span className="gradient-text">Transformation</span>
+            Let's Start Your{" "} <span className="heading">Transformation</span>
             
           </h1>   
           <p className="text-[var(--gray)] text-base sm:text-lg font-inter max-w-2xl mx-auto">
@@ -342,20 +342,7 @@ export default function ContactPage() {
             ))}
           </div>
 
-          {/* Map Section */}
-          <div className="w-full h-[300px] overflow-hidden rounded-2xl border border-[var(--gray-border)]">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241316.6433247217!2d72.7411014549518!3d19.082522335147225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Office Location Map"
-              className="grayscale hover:grayscale-0 transition-all duration-500"
-            />
-          </div>
+          
         </div>
       </section>
     </>

@@ -116,13 +116,10 @@ export default function ContactForm() {
   });
 
   const products = [
-    "Jewellers Masterclass",
-    "Business Scaling Program",
-    "Leadership Mastery",
-    "Women Entrepreneurs Program",
-    "1-on-1 Coaching",
-    "Corporate Training / Keynote",
-    "General Enquiry"
+    "Physical Training ",
+    "Online Business Training ",
+    "One-to-One Physical Training",
+    "Online One-to-One Business Consultation ",
   ];
 
   const countries = ["India", "USA", "UK", "Canada", "Australia", "UAE", "Singapore", "Other"];

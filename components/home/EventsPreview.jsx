@@ -39,7 +39,7 @@ export default function EventsPreview() {
               style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", color: "#0F172A" }}
             >
               Upcoming{" "}
-              <span className="gradient-text-orange">Events</span>
+              <span className="heading">Events</span>
             </motion.h2>
           </div>
           <Link href="/events" className="btn-secondary inline-flex text-sm shrink-0">
@@ -112,7 +112,7 @@ export default function EventsPreview() {
                   {/* CTA */}
                   <Link
                     href={`/events#${ev.slug}`}
-                    className="shrink-0 flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#0F172A] text-white text-sm font-semibold hover:bg-[#F97316] transition-all duration-300 font-inter"
+                    className="btn-primary shrink-0 flex items-center gap-2 px-5 py-2.5 rounded-xl  text-white text-sm font-semibold hover:bg-[#F97316] transition-all duration-300 font-inter"
                   >
                     Register Now
                     <ArrowRight size={14} />

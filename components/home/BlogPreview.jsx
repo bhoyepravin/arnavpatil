@@ -33,10 +33,10 @@ export default function BlogPreview() {
               style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", color: "#0F172A" }}
             >
               Latest from the{" "}
-              <span className="gradient-text-orange">Blog</span>
+              <span className="heading">Blog</span>
             </motion.h2>
           </div>
-          <Link href="/blog" className="btn-secondary inline-flex text-sm shrink-0">
+          <Link href="/blog" className="btn-primary inline-flex text-sm shrink-0">
             All Articles <ArrowRight size={14} />
           </Link>
         </div>
@@ -57,10 +57,10 @@ export default function BlogPreview() {
                 className="h-2"
                 style={{
                   background: i === 0
-                    ? "linear-gradient(90deg, #F97316, #FB923C)"
+                    ? "linear-gradient(90deg, #480A62, #480A62)"
                     : i === 1
-                    ? "linear-gradient(90deg, #0891B2, #06B6D4)"
-                    : "linear-gradient(90deg, #8B5CF6, #A78BFA)",
+                    ? "linear-gradient(90deg, #480A62, #480A62)"
+                    : "linear-gradient(90deg, #480A62, #480A62)",
                 }}
               />
 

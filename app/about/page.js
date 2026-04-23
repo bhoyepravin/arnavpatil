@@ -207,6 +207,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { CheckCircle2, ArrowRight } from "lucide-react";
+import TimelineSection from "@/components/about/TimelineSection";
+import StorySection from "@/components/about/StorySection";
 
 export const metadata = buildMetadata("about");
 
@@ -235,78 +237,78 @@ export default function AboutPage() {
 
       {/* Hero Section */}
       <section className="pt-28 sm:pt-32 pb-12 sm:pb-20 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-            
-            {/* Content - Left Side */}
-            <div className="text-center lg:text-left order-2 lg:order-1">
-              <span className="section-label mb-4 sm:mb-5 inline-flex">About the Coach</span>
-              <h1
-  className="font-montserrat font-extrabold leading-tight tracking-tight mb-4 sm:mb-6"
-  style={{ fontSize: "clamp(1.8rem, 5vw, 3rem)", color: "#0F172A" }}
->
-  Meet{" "}
-  <span className="gradient-text">Mr. Arnav Patil</span>{" "}
-  <span className="text-slate-500">(Arnasoft Solutions)</span>
-</h1>
-              <p className="text-base sm:text-lg md:text-xl text-slate-500 font-inter mb-3 sm:mb-4">
-                {coachInfo.title}
-              </p>
-              <div className="w-20 h-1 rounded-full bg-gradient-to-r from-[#F97316] to-[#0891B2] mb-5 sm:mb-6 mx-auto lg:mx-0" />
-              
-              <p className="text-slate-500 text-sm sm:text-base leading-relaxed font-inter mb-3 sm:mb-4">
-                {coachInfo.bio.split("\n\n")[0]}
-              </p>
-              <p className="text-slate-500 text-sm sm:text-base leading-relaxed font-inter mb-3 sm:mb-4">
-                {coachInfo.bio.split("\n\n")[1]}
-              </p>
-              <p className="text-slate-500 text-sm sm:text-base leading-relaxed font-inter mb-6 sm:mb-8">
-                {coachInfo.bio.split("\n\n")[2]}
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-                <a 
-                  href={coachInfo.whatsapp} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="btn-primary inline-flex items-center justify-center text-sm sm:text-base py-3 sm:py-3.5 px-5 sm:px-6"
-                >
-                  <FaWhatsapp size={16} className="mr-2" /> Book Free Consultation
-                </a>
-                <a
-                  href={coachInfo.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-secondary inline-flex items-center justify-center text-sm sm:text-base py-3 sm:py-3.5 px-5 sm:px-6"
-                >
-                  <FaInstagram size={16} className="mr-2" /> Follow on Instagram
-                </a>
-              </div>
-            </div>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+      
+      {/* Content - Left Side */}
+      <div className="text-center lg:text-left order-2 lg:order-1">
+        <span className="section-label mb-4 sm:mb-5 inline-flex">About the Coach</span>
+        <h1
+          className="font-montserrat font-extrabold leading-tight tracking-tight mb-4 sm:mb-6"
+          style={{ fontSize: "clamp(1.8rem, 5vw, 3rem)", color: "#0F172A" }}
+        >
+          Meet{" "}
+          <span className="heading">Mr. Arnav Patil</span>{" "}
+          {/* <span className="text-slate-500">(Arnasoft Solutions)</span> */}
+        </h1>
+        <p className="heading text-base sm:text-lg md:text-xl text-slate-500 font-bold mb-3 sm:mb-4">
+          {coachInfo.title}
+        </p>
+        <div className="w-20 h-1 rounded-full bg-gradient-to-r from-[#480A62] to-[#480A62] mb-5 sm:mb-6 mx-auto lg:mx-0" />
+        
+        <p className="text-gray-600 text-sm sm:text-base leading-relaxed font-inter mb-3 sm:mb-4">
+          {coachInfo.bio.split("\n\n")[0]}
+        </p>
+        <p className="text-slate-500 text-sm sm:text-base leading-relaxed font-inter mb-3 sm:mb-4">
+          {coachInfo.bio.split("\n\n")[1]}
+        </p>
+        <p className="text-slate-500 text-sm sm:text-base leading-relaxed font-inter mb-6 sm:mb-8">
+          {coachInfo.bio.split("\n\n")[2]}
+        </p>
+        
+        {/* <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+          <a 
+            href={coachInfo.whatsapp} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn-primary inline-flex items-center justify-center text-sm sm:text-base py-3 sm:py-3.5 px-5 sm:px-6"
+          >
+            <FaWhatsapp size={16} className="mr-2" /> Book a Consultation
+          </a>
+          <a
+            href={coachInfo.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary inline-flex items-center justify-center text-sm sm:text-base py-3 sm:py-3.5 px-5 sm:px-6"
+          >
+            <FaInstagram size={16} className="mr-2" /> Follow on Instagram
+          </a>
+        </div> */}
+      </div>
 
-            {/* Photo - Right Side */}
-            <div className="relative flex justify-center lg:justify-end order-1 lg:order-2 mb-8 lg:mb-0">
-              <div className="relative w-[280px] sm:w-[340px] md:w-[380px] aspect-square rounded-3xl shadow-2xl overflow-hidden mx-auto lg:mx-0">
-                <div 
-                  className="absolute inset-0 flex items-center justify-center p-6 sm:p-10"
-                  style={{ background: "linear-gradient(145deg, #FFF7ED 0%, #F0FDFF 100%)" }}
-                >
-                  <Image
-                    src="/images/arnav_patil_sir.jpeg"
-                    alt="Mr. Arnav Patil — Business Coach"
-                    width={280}
-                    height={280}
-                    className="w-48 sm:w-56 md:w-64 h-auto object-contain"
-                    priority
-                  />
-                </div>
-              </div>
-              {/* Accent border - hidden on mobile */}
-              <div className="absolute -bottom-6 -right-3 w-full h-full rounded-3xl border-2 border-[#F97316]/20 pointer-events-none hidden sm:block" />
-            </div>
+      {/* Photo - Right Side - LARGER IMAGE, NO BORDER */}
+      <div className="relative flex justify-center lg:justify-end order-1 lg:order-2 mb-8 lg:mb-0">
+        <div className="relative w-[360px] sm:w-[480px] md:w-[560px] aspect-square rounded-3xl shadow-2xl overflow-hidden mx-auto lg:mx-0">
+          <div 
+            className="absolute inset-0 flex items-center justify-center"
+            style={{ background: "linear-gradient(145deg, #FFF7ED 0%, #F0FDFF 100%)" }}
+          >
+            <Image
+              src="/images/arnav_patil_sir.jpeg"
+              alt="Mr. Arnav Patil — Business Coach"
+              width={500}
+              height={500}
+              className="w-full h-full object-cover"
+              priority
+            />
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <StorySection/>
 
       {/* Stats Section - Light Orange Background */}
       <section className="py-12 sm:py-16 bg-orange-50">
@@ -331,7 +333,9 @@ export default function AboutPage() {
 
       {/* Journey Timeline Section */}
       {/* Journey Timeline Section */}
-<section className="py-16 sm:py-24 bg-[#F8FAFC]">
+
+      <TimelineSection/>
+{/* <section className="py-16 sm:py-24 bg-[#F8FAFC]">
   <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-10 sm:mb-14">
       <span className="section-label mb-3 sm:mb-4 inline-flex">The Journey</span>
@@ -347,13 +351,13 @@ export default function AboutPage() {
     </div>
 
     <div className="relative">
-      {/* Vertical line - hidden on mobile */}
+      
       <div className="hidden sm:block absolute left-6 md:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#F97316] to-[#0891B2]" />
 
       <div className="space-y-5 sm:space-y-8">
         {timeline.map((item, i) => (
           <div key={i} className="flex flex-col sm:flex-row gap-3 sm:gap-6 items-start">
-            {/* Year Badge */}
+            
             <div
               className="w-full sm:w-20 h-10 rounded-xl flex items-center justify-center text-white text-xs font-bold shadow-sm font-inter"
               style={{
@@ -365,7 +369,6 @@ export default function AboutPage() {
               {item.year}
             </div>
             
-            {/* Event Card */}
             <div className="bg-white rounded-2xl px-4 sm:px-6 py-3 sm:py-4 shadow-sm border border-slate-100 flex-1">
               <p className="text-slate-600 text-xs sm:text-sm font-inter leading-relaxed">
                 {item.event}
@@ -376,11 +379,11 @@ export default function AboutPage() {
       </div>
     </div>
   </div>
-</section>
+</section> */}
 
       {/* Why Choose Section */}
       {/* Why Choose Section */}
-<section className="py-16 sm:py-24 bg-white">
+{/* <section className="py-16 sm:py-24 bg-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-10 sm:mb-14">
       <span className="section-label mb-3 sm:mb-4 inline-flex">Values & Approach</span>
@@ -401,7 +404,7 @@ export default function AboutPage() {
           key={i}
           className="p-5 sm:p-7 rounded-3xl border border-slate-100 hover:border-orange-100 hover:shadow-md transition-all duration-300"
         >
-          {/* <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">{item.icon}</div> */}
+          
           <h3 className="font-montserrat font-bold text-base sm:text-lg text-[#0F172A] mb-2">
             {item.title}
           </h3>
@@ -412,28 +415,73 @@ export default function AboutPage() {
       ))}
     </div>
   </div>
+</section> */}
+
+<section className="py-16 sm:py-24 bg-white relative overflow-hidden">
+  {/* Subtle Background Decoration */}
+  <div className="absolute inset-0 pointer-events-none">
+    <div className="absolute top-20 right-20 w-64 h-64 bg-orange-50/30 rounded-full blur-2xl" />
+    <div className="absolute bottom-20 left-20 w-64 h-64 bg-teal-50/30 rounded-full blur-2xl" />
+  </div>
+
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div className="text-center mb-10 sm:mb-14">
+      <span className="section-label mb-3 sm:mb-4 inline-flex items-center gap-2">
+        <span className="w-1.5 h-1.5 rounded-full bg-[var(--orange)]"></span>
+        Values & Approach
+      </span>
+      <h2
+        className="font-montserrat font-extrabold leading-tight px-2"
+        style={{ fontSize: "clamp(1.5rem, 4vw, 2.4rem)", color: "#0F172A" }}
+      >
+        The <span className="heading">Arnasoft</span> Difference
+      </h2>
+      <p className="text-slate-500 text-sm sm:text-base font-inter mt-3 max-w-2xl mx-auto">
+        Powered by <span className="font-semibold text-[#F97316] relative inline-block">Arnasoft Solutions</span>
+      </p>
+    </div>
+    
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+      {whyChoose.map((item, i) => (
+        <div
+          key={i}
+          className="group p-5 sm:p-7 rounded-3xl border-3 border-slate-200 hover:border-orange-200 hover:shadow-md transition-all duration-300 bg-white hover:bg-gradient-to-br hover:from-white hover:to-orange-50/30"
+        >
+          {/* Subtle accent line on hover */}
+          <div className="w-20 h-0.5 bg-gradient-to-r from-[#480A62] to-[#480A62] mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          
+          <h3 className="font-montserrat font-bold text-base sm:text-lg text-[#0F172A] mb-2 group-hover:text-[#F97316] transition-colors duration-300">
+            {item.title}
+          </h3>
+          <p className="text-slate-500 text-xs sm:text-sm leading-relaxed font-inter group-hover:text-slate-600 transition-colors duration-300">
+            {item.desc}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
 </section>
 
       {/* Brand Showcase Section - Arnasoft Solutions */}
-      <section className="py-12 sm:py-16 bg-gradient-to-r from-orange-50 to-teal-50">
+      {/* <section className="py-12 sm:py-16 bg-gradient-to-r from-orange-50 to-teal-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-4 sm:px-6 py-2 sm:py-3 shadow-sm mb-6">
             <span className="text-xs sm:text-sm font-semibold text-[#F97316]">Proudly Powered by</span>
           </div>
           <h3 className="font-montserrat font-black text-3xl sm:text-4xl md:text-5xl text-[#0F172A] mb-3">
-            Arnasoft <span className="gradient-text">Solutions</span>
+            Arnasoft <span className="">Solutions</span>
           </h3>
           <p className="text-slate-600 text-sm sm:text-base font-inter max-w-2xl mx-auto">
             Innovative digital solutions for modern businesses
           </p>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-16 sm:py-20 bg-[#F8FAFC] text-center px-4 sm:px-6">
         <div className="max-w-3xl mx-auto">
           <h2 className="font-montserrat font-extrabold text-2xl sm:text-3xl text-[#0F172A] mb-3 sm:mb-4 px-2">
-            Ready to Transform Your Business?
+            Ready to Transform <span className="heading">  Your Business?</span>
           </h2>
           <p className="text-slate-500 font-inter text-sm sm:text-base mb-6 sm:mb-8 px-4">
             Connect with Arnav Patil for coaching, masterclasses, or keynote speaking engagements.

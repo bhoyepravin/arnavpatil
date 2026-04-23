@@ -28,7 +28,7 @@ export default function WhySection() {
             style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", color: "#0B0F1A" }}
           >
             Why Business Owners{" "}
-            <span className="gradient-text">Choose Arnav</span>
+            <span className="heading">Choose Arnav</span>
           </motion.h2>
         </div>
 
@@ -44,7 +44,7 @@ export default function WhySection() {
               className="group relative p-7 rounded-2xl border border-slate-100 hover:border-[#F97316]/30 bg-white hover:shadow-xl overflow-hidden transition-all duration-400"
             >
               {/* Hover accent */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#F97316] to-[#0891B2] scale-x-0 group-hover:scale-x-100 transition-transform duration-400 origin-left" />
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#480A62] to-[#480A62] scale-x-0 group-hover:scale-x-100 transition-transform duration-400 origin-left" />
 
               {/* <div className="text-4xl mb-5">{item.icon}</div> */}
               <h3 className="font-montserrat font-black text-lg text-[#0B0F1A] mb-3 group-hover:text-[#F97316] transition-colors duration-200">

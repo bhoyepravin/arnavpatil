@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --orange: #F97316;
-  --orange-dark: #EA6A0A;
+  --orange: #480A62;
+  --orange-dark: #480A62;
   --orange-light: #FED7AA;
   --orange-pale: #FFF7ED;
   --teal: #0891B2;
@@ -16,9 +16,12 @@
   --dark: #0B0F1A;
   --dark-2: #1A2035;
   --gray: #64748B;
+  --orange-dark: #F97316 ;
 }
 
-html { scroll-behavior: smooth; }
+html { 
+  scroll-behavior: smooth;
+}
 
 body {
   background: var(--white);
@@ -32,8 +35,25 @@ body {
 ::-webkit-scrollbar-thumb { background: var(--orange); border-radius: 10px; }
 
 /* Font utilities */
-.font-montserrat { font-family: var(--font-montserrat), sans-serif; }
-.font-inter { font-family: var(--font-inter), sans-serif; }
+.font-montserrat { 
+  font-family: var(--font-montserrat), 'Montserrat', system-ui, -apple-system, sans-serif; 
+  font-weight:600;
+}
+.font-inter { 
+  font-family: var(--font-inter), 'Inter', system-ui, -apple-system, sans-serif; 
+}
+
+
+
+/* Apply Montserrat to all headings by default */
+h1, h2, h3, h4, h5, h6, 
+.section-label,
+.btn-primary,
+.btn-secondary,
+.btn-white,
+.btn-outline-white {
+  font-family: var(--font-montserrat), 'Montserrat', system-ui, -apple-system, sans-serif;
+}
 
 /* Gradient text */
 .gradient-text {
@@ -41,6 +61,10 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.heading {
+  color: var(--orange-dark);
 }
 
 /* Section label */
@@ -57,7 +81,6 @@ body {
   background: var(--orange-pale);
   color: var(--orange-dark);
   border: 1px solid var(--orange-light);
-  font-family: var(--font-montserrat), sans-serif;
 }
 
 /* Buttons */
@@ -73,7 +96,6 @@ body {
   color: white;
   transition: all 0.25s ease;
   box-shadow: 0 4px 20px rgba(249,115,22,0.4);
-  font-family: var(--font-montserrat), sans-serif;
   cursor: pointer;
   text-decoration: none;
   letter-spacing: 0.02em;
@@ -96,7 +118,6 @@ body {
   color: var(--dark);
   border: 2px solid var(--gray-border);
   transition: all 0.25s ease;
-  font-family: var(--font-montserrat), sans-serif;
   cursor: pointer;
   text-decoration: none;
 }
@@ -118,7 +139,6 @@ body {
   color: var(--orange);
   transition: all 0.25s ease;
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-  font-family: var(--font-montserrat), sans-serif;
   cursor: pointer;
   text-decoration: none;
 }
@@ -139,7 +159,6 @@ body {
   color: white;
   border: 2px solid rgba(255,255,255,0.5);
   transition: all 0.25s ease;
-  font-family: var(--font-montserrat), sans-serif;
   cursor: pointer;
   text-decoration: none;
 }

@@ -51,7 +51,7 @@ const socialStats = [
 
 export default function SocialPresence() {
   return (
-    <section className="py-16 sm:py-20 lg:py-28 bg-white overflow-hidden">
+    <section className="py-10  sm:py-20 lg:py-28 bg-orange-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
@@ -76,8 +76,8 @@ export default function SocialPresence() {
               fontSize: "clamp(1.6rem, 4vw, 2.6rem)",
             }}
           >
-            My Social Media{" "}
-            <span className="gradient-text">Presence</span>
+            Social Media{" "}
+            <span className="heading">Presence</span>
           </motion.h2>
         </div>
 

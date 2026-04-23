@@ -135,7 +135,7 @@ export default function Navbar() {
     transition-all duration-200 shadow-md shadow-orange-200"
   >
     <FaWhatsapp size={15} />
-    Book Free Call
+    Book a Call
   </a>
 
 </div>

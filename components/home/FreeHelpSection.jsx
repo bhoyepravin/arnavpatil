@@ -14,9 +14,9 @@ const items = [
   {
     id: 2,
     icon: <Headphones size={30} className="text-[var(--orange)]" />,
-    title: "Listen",
-    desc: "No time to watch videos? Start listening to the ‘Mission Business Freedom’ podcast while working to get almost everything in audio.",
-    btn: "Listen Now",
+    title: "Insights",
+    desc: "Short, impactful ideas to help you think smarter, act faster, and grow your business—without spending hours learning.",
+    btn: "Explore Now",
   },
   {
     id: 3,
@@ -42,12 +42,12 @@ export default function FreeHelpSection() {
           style={{ fontSize: "clamp(1.8rem,3.5vw,2.6rem)" }}
         >
           Looking For Free Help?{" "}
-          <span className="gradient-text">- Here You Go!</span>
+          <span className="heading">- Here You Go!</span>
         </motion.h2>
 
         {/* Subheading */}
         <p className="font-montserrat text-lg sm:text-xl tracking-wide text-[var(--dark-2)] mb-3">
-          READ. LISTEN. WATCH
+          READ. INSIGHTS. WATCH  
         </p>
 
         <p className="text-[var(--gray)] font-inter text-sm sm:text-base max-w-2xl mx-auto mb-12">

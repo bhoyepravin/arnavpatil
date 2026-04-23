@@ -21,10 +21,17 @@ const clientsLoop = [...clients, ...clients];
 
 function ClientLogo({ client }) {
   return (
-    <div className="flex-shrink-0 mx-5 flex items-center justify-center">
-      <div className="bg-white border border-slate-100 rounded-xl px-6 py-4 shadow-sm hover:shadow-md hover:border-[#F97316]/30 transition-all duration-300 min-w-[150px] text-center">
-        <div className="font-montserrat font-bold text-sm text-slate-700">{client.name}</div>
-        <div className="text-xs text-slate-400 font-inter mt-0.5">{client.sector}</div>
+    <div className="flex-shrink-0 mx-6 flex items-center justify-center">
+      <div className="bg-white border  border-amber-400 rounded-2xl px-8 py-6 shadow-sm hover:shadow-lg hover:border-[#F97316]/30 transition-all duration-300 min-w-[200px] text-center">
+        
+        <div className="font-montserrat font-bold text-base text-slate-800">
+          {client.name}
+        </div>
+
+        <div className="text-sm text-slate-400 font-inter mt-1">
+          {client.sector}
+        </div>
+
       </div>
     </div>
   );
@@ -51,7 +58,7 @@ export default function ClientsStrip() {
           className="font-montserrat font-black text-[#0B0F1A] mb-2"
           style={{ fontSize: "clamp(1.5rem, 3vw, 2.2rem)" }}
         >
-          1000+ Businesses <span className="gradient-text">Transformed</span>
+          1000+ Businesses <span className="heading">Transformed</span>
         </motion.h2>
       </div>
 

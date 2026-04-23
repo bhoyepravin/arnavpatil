@@ -47,7 +47,7 @@ export default function FeaturedInSection() {
             style={{ fontSize: "clamp(1.8rem,3.3vw,2.6rem)" }}
           >
             As Featured In: <br />
-            <span className="gradient-text">Trusted Platforms</span>
+            <span className="heading">Trusted Platforms</span>
           </motion.h2>
 
           <motion.p

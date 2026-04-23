@@ -17,7 +17,7 @@ export default function ContactSection() {
           </div>
 
           {/* RIGHT FORM */}
-          <div className="bg-white rounded-2xl shadow-xl border border-[var(--gray-border)] p-6 sm:p-8 lg:p-10">
+          <div className="bg-white rounded-2xl shadow-xl border border-orange-400 p-6 sm:p-8 lg:p-10">
 
             {/* Header */}
             <div className="mb-6 sm:mb-8">
@@ -26,7 +26,7 @@ export default function ContactSection() {
               </span>
 
               <h2 className="font-montserrat font-black text-[clamp(1.6rem,3vw,2.4rem)] text-[var(--dark)] leading-tight">
-                Request for <span className="gradient-text">Consulting</span>
+                Request for <span className="heading font-bold">Consulting</span>
               </h2>
             </div>
 
@@ -58,11 +58,10 @@ export default function ContactSection() {
                 <select
                   className="w-full px-4 py-3 rounded-lg border border-[var(--gray-border)] bg-[var(--white)] text-[var(--gray)] focus:outline-none focus:border-[var(--orange)] transition"
                 >
-                  <option>Choose A Service</option>
-                  <option>Business Consulting</option>
-                  <option>Marketing Strategy</option>
-                  <option>Growth Coaching</option>
-                  <option>Startup Mentorship</option>
+                  <option>Physical Training</option>
+                  <option>Online Business Training </option>
+                  <option>One-to-One Business Consultation  </option>
+                  <option>Online One-to-One Business Consultation </option>
                 </select>
               </div>
 

@@ -29,7 +29,7 @@ export default function GalleryPage() {
             style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: "#0F172A" }}
           >
             Moments of{" "}
-            <span className="gradient-text-orange">Transformation</span>
+            <span className="heading">Transformation</span>
           </h1>
           <p className="text-slate-500 font-inter text-lg">
             A glimpse into the energy, learning, and breakthroughs from Arnav Patil&apos;s masterclasses and coaching sessions.
@@ -97,7 +97,7 @@ export default function GalleryPage() {
       {/* CTA */}
       <section className="py-20 bg-white text-center px-6">
         <h2 className="font-montserrat font-extrabold text-2xl text-[#0F172A] mb-4">
-          Follow Arnav on Instagram for More
+          Follow Arnav on <span className="heading">Instagram for More</span>
         </h2>
         <p className="text-slate-500 font-inter mb-8">
           Stay updated with the latest events, client stories, and business insights.

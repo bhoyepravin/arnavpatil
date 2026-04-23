@@ -72,7 +72,7 @@ export default function TestimonialsSection() {
           className="font-montserrat font-black leading-tight tracking-tight mb-3"
           style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", color: "#0B0F1A" }}
         >
-          What Our <span className="gradient-text">Clients Say</span>
+          What Our <span className="heading">Clients Say</span>
         </motion.h2>
         <motion.p
           initial={{ opacity: 0 }}
