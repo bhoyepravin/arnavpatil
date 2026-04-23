@@ -46,10 +46,10 @@ export default function StorySection() {
           <span className="section-label mb-4 inline-flex">
             The Story
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[var(--dark)] font-montserrat">
+          <h2 className="heading-xl text-3xl sm:text-4xl font-extrabold text-[var(--dark)] font-montserrat">
             A Journey Of <span className="heading">Transformation</span>
           </h2>
-          <p className="text-[var(--gray)] font-inter text-sm sm:text-base mt-3 max-w-2xl mx-auto">
+          <p className="text-gray-800 font-medium text-xs sm:text-base mt-3 max-w-2xl mx-auto">
             From humble beginnings to transforming thousands of businesses
           </p>
         </motion.div>

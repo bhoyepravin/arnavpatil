@@ -64,12 +64,12 @@ export default function TimelineSection() {
             The Journey
           </span>
           <h2
-            className="font-montserrat font-extrabold leading-tight px-2"
+            className="heading-xl font-montserrat font-extrabold leading-tight px-2"
             style={{ fontSize: "clamp(1.5rem, 4vw, 2.4rem)", color: "#0F172A" }}
           >
             The <span className="heading">Arnasoft</span> Story
           </h2>
-          <p className="text-slate-500 text-sm sm:text-base font-inter mt-3 max-w-2xl mx-auto">
+          <p className="text-gray-800 text-sm sm:text-base font-medium mt-3 max-w-2xl mx-auto">
             From vision to reality — the journey of excellence
           </p>
         </motion.div>
@@ -155,7 +155,7 @@ export default function TimelineSection() {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="text-center mt-12 pt-6 border-t border-slate-100"
         >
-          <p className="text-slate-500 text-sm font-inter mb-4">
+          <p className="text-gray-800 text-sm lg:text-base font-inter mb-4">
             Be a part of our growing success story
           </p>
           <button className="btn-primary text-sm px-6 py-2.5">

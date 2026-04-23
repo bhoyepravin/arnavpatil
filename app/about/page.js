@@ -244,7 +244,7 @@ export default function AboutPage() {
       <div className="text-center lg:text-left order-2 lg:order-1">
         <span className="section-label mb-4 sm:mb-5 inline-flex">About the Coach</span>
         <h1
-          className="font-montserrat font-extrabold leading-tight tracking-tight mb-4 sm:mb-6"
+          className="heading-xl font-montserrat font-extrabold leading-tight tracking-tight mb-4 sm:mb-6"
           style={{ fontSize: "clamp(1.8rem, 5vw, 3rem)", color: "#0F172A" }}
         >
           Meet{" "}
@@ -431,12 +431,12 @@ export default function AboutPage() {
         Values & Approach
       </span>
       <h2
-        className="font-montserrat font-extrabold leading-tight px-2"
+        className="heading-xl font-montserrat font-extrabold leading-tight px-2"
         style={{ fontSize: "clamp(1.5rem, 4vw, 2.4rem)", color: "#0F172A" }}
       >
         The <span className="heading">Arnasoft</span> Difference
       </h2>
-      <p className="text-slate-500 text-sm sm:text-base font-inter mt-3 max-w-2xl mx-auto">
+      <p className="text-gray-800 text-sm sm:text-base font-medium mt-3 max-w-2xl mx-auto">
         Powered by <span className="font-semibold text-[#F97316] relative inline-block">Arnasoft Solutions</span>
       </p>
     </div>
@@ -480,10 +480,10 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-16 sm:py-20 bg-[#F8FAFC] text-center px-4 sm:px-6">
         <div className="max-w-3xl mx-auto">
-          <h2 className="font-montserrat font-extrabold text-2xl sm:text-3xl text-[#0F172A] mb-3 sm:mb-4 px-2">
+          <h2 className="heading-xl font-montserrat font-extrabold text-2xl sm:text-4xl text-[#0F172A] mb-3 sm:mb-4 px-2">
             Ready to Transform <span className="heading">  Your Business?</span>
           </h2>
-          <p className="text-slate-500 font-inter text-sm sm:text-base mb-6 sm:mb-8 px-4">
+          <p className="text-gray-800 font-medium text-xs sm:text-base mb-6 sm:mb-8 px-4">
             Connect with Arnav Patil for coaching, masterclasses, or keynote speaking engagements.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">

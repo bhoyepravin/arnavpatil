@@ -39,10 +39,20 @@ body {
   font-family: var(--font-montserrat), 'Montserrat', system-ui, -apple-system, sans-serif; 
   font-weight:600;
 }
+
+.heading-xl {
+  font-weight: 800 !important;
+  text-shadow: 0 0 8px rgba(249, 115, 22, 0.25);
+}
+
+
 .font-inter { 
   font-family: var(--font-inter), 'Inter', system-ui, -apple-system, sans-serif; 
 }
 
+.font-heading{
+  font-weight: 800;
+}
 
 
 /* Apply Montserrat to all headings by default */
@@ -52,7 +62,10 @@ h1, h2, h3, h4, h5, h6,
 .btn-secondary,
 .btn-white,
 .btn-outline-white {
-  font-family: var(--font-montserrat), 'Montserrat', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', system-ui, sans-serif;
+  font-weight: 800; /* stronger than bold */
+  letter-spacing: -0.02em; /* tighter = premium look */
+  line-height: 1.2;
 }
 
 /* Gradient text */
@@ -64,7 +77,9 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .heading {
-  color: var(--orange-dark);
+  color: #F97316;
+  font-weight: 800;
+  position: relative;
 }
 
 /* Section label */
@@ -85,7 +100,8 @@ h1, h2, h3, h4, h5, h6,
 
 /* Buttons */
 .btn-primary {
-  display: inline-flex;
+  display: inline-flex; 
+  
   align-items: center;
   gap: 8px;
   padding: 14px 32px;

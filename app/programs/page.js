@@ -270,13 +270,13 @@ export default function ProgramsPage() {
         <div className="max-w-3xl mx-auto">
           <span className="section-label mb-4 sm:mb-5 inline-flex">Our Programs</span>
           <h1
-            className="font-montserrat font-extrabold leading-tight tracking-tight mb-4 sm:mb-5"
-            style={{ fontSize: "clamp(1.8rem, 5vw, 3.2rem)", color: "#0F172A" }}
+            className="heading-xl font-montserrat font-extrabold leading-tight tracking-tight mb-4 sm:mb-5"
+            style={{ fontSize: "clamp(1.6rem, 4vw, 2.6rem)", color: "#0F172A" }}
           >
             Coaching Programmes{" "}
             <span className="heading">Built for Results</span>
           </h1>
-          <p className="text-slate-500 text-base sm:text-lg font-inter max-w-2xl mx-auto px-2">
+          <p className="text-gray-800 text-xs sm:text-base font-medium max-w-2xl mx-auto px-2">
             Every programme is crafted from 10+ years of real-world business transformation. 
             Choose what fits your stage and start growing with <span className="font-semibold text-[#F97316]">Arnasoft Solutions</span>.
           </p>
@@ -371,12 +371,12 @@ export default function ProgramsPage() {
     <div className="text-center mb-10 sm:mb-14">
       <span className="section-label mb-3 sm:mb-4 inline-flex">Why Choose Us</span>
       <h2
-        className="font-montserrat font-extrabold leading-tight px-2"
+        className="heading-xl font-montserrat font-extrabold leading-tight px-2"
         style={{ fontSize: "clamp(1.5rem, 4vw, 2.4rem)", color: "#0F172A" }}
       >
         The <span className="heading">Arnasoft</span> Advantage
       </h2>
-      <p className="text-slate-600 text-sm sm:text-base font-inter mt-3 max-w-2xl mx-auto">
+      <p className="text-gray-800 text-xs sm:text-base font-medium mt-3 max-w-2xl mx-auto">
         What makes our coaching programs different and effective
       </p>
     </div>
@@ -429,10 +429,10 @@ export default function ProgramsPage() {
           <div className="inline-flex items-center gap-2 bg-orange-50 rounded-full px-4 sm:px-6 py-2 sm:py-3 shadow-sm mb-6">
             <span className="text-xs sm:text-sm font-semibold text-[#F97316]">Powered by Excellence</span>
           </div>
-          <h3 className="font-montserrat font-black text-2xl sm:text-3xl md:text-4xl text-[#0F172A] mb-3">
+          <h3 className="heading-xl font-montserrat font-black text-2xl sm:text-3xl md:text-4xl text-[#0F172A] mb-3">
             Arnasoft <span className="heading">Solutions</span>
           </h3>
-          <p className="text-slate-600 text-sm sm:text-base font-inter max-w-2xl mx-auto">
+          <p className="text-gray-800 text-xs sm:text-base font-medium max-w-2xl mx-auto">
             Transforming businesses through innovative coaching and digital solutions
           </p>
         </div>
@@ -441,10 +441,10 @@ export default function ProgramsPage() {
       {/* CTA Section */}
       <section className="py-16 sm:py-20 bg-orange-50 text-center px-4 sm:px-6">
         <div className="max-w-3xl mx-auto">
-          <h2 className="font-montserrat font-extrabold text-2xl sm:text-3xl text-[#0F172A] mb-3 sm:mb-4">
+          <h2 className="heading-xl font-montserrat font-extrabold text-2xl sm:text-3xl text-[#0F172A] mb-3 sm:mb-4">
             Not Sure Which <span className="heading">Program Is Right?</span> 
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base font-inter mb-6 sm:mb-8 max-w-xl mx-auto px-4">
+          <p className="text-gray-800 text-xs sm:text-base font-inter mb-6 sm:mb-8 max-w-xl mx-auto px-4">
             Connect with Arnav Sir directly on WhatsApp for a free consultation 
             and personalised recommendation.
           </p>

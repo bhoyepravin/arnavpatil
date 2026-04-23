@@ -25,13 +25,13 @@ export default function GalleryPage() {
         <div className="max-w-3xl mx-auto">
           <span className="section-label mb-5 inline-flex">Gallery</span>
           <h1
-            className="font-montserrat font-extrabold leading-tight mb-5"
+            className="heading-xl font-montserrat font-extrabold leading-tight mb-5"
             style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: "#0F172A" }}
           >
             Moments of{" "}
             <span className="heading">Transformation</span>
           </h1>
-          <p className="text-slate-500 font-inter text-lg">
+          <p className="text-gray-800 text-xs sm:text-base font-medium max-w-2xl mx-auto px-2 ">
             A glimpse into the energy, learning, and breakthroughs from Arnav Patil&apos;s masterclasses and coaching sessions.
           </p>
         </div>
@@ -56,7 +56,7 @@ export default function GalleryPage() {
             ))}
           </div> */}
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
   {galleryItems.map((item) => (
     <div
       key={item.id}

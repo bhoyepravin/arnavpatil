@@ -325,13 +325,13 @@ export default function EventsPage() {
         <div className="max-w-3xl mx-auto">
           <span className="section-label mb-4 sm:mb-5 inline-flex">Events & Masterclasses</span>
           <h1
-            className="font-montserrat font-extrabold leading-tight mb-4 sm:mb-5"
+            className="heading-xl font-montserrat font-extrabold leading-tight mb-4 sm:mb-5"
             style={{ fontSize: "clamp(1.8rem, 5vw, 3rem)", color: "#0F172A" }}
           >
             Upcoming{" "}
             <span className="heading">& Past Events</span>
           </h1>
-          <p className="text-slate-600 text-base sm:text-lg font-inter max-w-2xl mx-auto">
+          <p className="text-gray-800 text-xs sm:text-lg font-medium max-w-2xl mx-auto">
             Join <span className="font-semibold text-[#F97316]">Arnasoft Solutions</span> live at masterclasses, 
             workshops, and online webinars — across India and beyond.
           </p>
@@ -342,7 +342,7 @@ export default function EventsPage() {
       <section className="py-16 sm:py-2 bg-gradient-to-b from-orange-50/30 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 sm:mb-14">
-            <h2 className="font-montserrat font-extrabold text-2xl sm:text-4xl text-[#0F172A] mb-2">
+            <h2 className=" font-montserrat font-extrabold text-2xl sm:text-4xl text-[#0F172A] mb-2">
               Upcoming Events 
             </h2>
           </div>
@@ -504,7 +504,7 @@ export default function EventsPage() {
               <h2 className=" font-extrabold text-2xl sm:text-4xl text-[#0F172A] mb-2">
                 Past Events
               </h2>
-              <p className="text-slate-500 text-sm sm:text-base font-inter">
+              <p className="text-gray-800 text-xs sm:text-base font-medium">
                 Glimpses of our transformative events
               </p>
             </div>
@@ -529,7 +529,7 @@ export default function EventsPage() {
                             src={eventImage}
                             alt={ev.title}
                             fill
-                            className="object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                            className="object-cover transition-transform duration-500 group-hover:scale-110 "
                           />
                           <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all" />
                         </>
@@ -582,7 +582,7 @@ export default function EventsPage() {
           <div className="text-center mb-10 sm:mb-14">
             <span className="section-label mb-3 sm:mb-4 inline-flex">Why Attend</span>
             <h2
-              className="font-montserrat font-extrabold leading-tight px-2"
+              className="heading-xl font-montserrat font-extrabold leading-tight px-2"
               style={{ fontSize: "clamp(1.5rem, 4vw, 2.4rem)", color: "#0F172A" }}
             >
               What Makes <span className="heading">Arnasoft Events</span> Special?
@@ -596,8 +596,8 @@ export default function EventsPage() {
             {[
               {
                 icon: FaChalkboardTeacher,
-                title: "Expert Speakers",
-                desc: "Learn from industry leaders and successful entrepreneurs"
+                title: "Expert Guidance ",
+                desc: "Learn the proven systems implemented by the successful entrepreneurs in the industry from Armav sir."
               },
               {
                 icon: FaHandshake,
@@ -611,8 +611,8 @@ export default function EventsPage() {
               },
               {
                 icon: FaTrophy,
-                title: "Certification",
-                desc: "Receive participation certificates and learning materials"
+                title: "Rewards and Achievements",
+                desc: "Receive amazing rewards and certifications for your work and effort throughout the program"
               }
             ].map((item, idx) => (
               <div
@@ -635,24 +635,24 @@ export default function EventsPage() {
       </section>
 
       {/* Brand Showcase */}
-      <section className="py-12 sm:py-16 bg-gradient-to-r from-orange-50 to-teal-50">
+      {/* <section className="py-12 sm:py-16 bg-gradient-to-r from-orange-50 to-teal-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-4 sm:px-6 py-2 sm:py-3 shadow-sm mb-6">
             <span className="text-xs sm:text-sm font-semibold text-[#F97316]">Powered by Excellence</span>
           </div>
-          <h3 className="font-montserrat font-black text-2xl sm:text-3xl md:text-4xl text-[#0F172A] mb-3">
+          <h3 className="heading-xl font-montserrat font-black text-2xl sm:text-3xl md:text-4xl text-[#0F172A] mb-3">
             Arnasoft <span className="heading">Solutions</span>
           </h3>
           <p className="text-slate-600 text-sm sm:text-base font-inter max-w-2xl mx-auto">
             Creating transformative experiences through world-class events and coaching
           </p>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-16 sm:py-20 bg-orange-50 text-center px-4 sm:px-6">
         <div className="max-w-3xl mx-auto">
-          <h2 className="font-montserrat font-extrabold text-2xl sm:text-3xl text-[#0F172A] mb-3 sm:mb-4">
+          <h2 className="heading-xl font-montserrat font-extrabold text-2xl sm:text-3xl md:text-3xl text-[#0F172A] mb-3 sm:mb-4">
             Want a Private Session or <span className="heading">Corporate Training?</span>  
           </h2>
           <p className="text-slate-600 text-sm sm:text-base font-inter mb-6 sm:mb-8 max-w-xl mx-auto px-4">

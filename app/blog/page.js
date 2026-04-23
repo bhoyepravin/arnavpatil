@@ -237,7 +237,7 @@ export default function BlogPage() {
       <section className="pt-28 pb-16 bg-gradient-to-br from-slate-50 to-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <span className="text-[#F97316] text-sm font-semibold tracking-wide uppercase mb-3 inline-block">Insights & Strategies</span>
-          <h1 className="font-montserrat font-bold text-4xl md:text-5xl text-[#0F172A] mb-4">
+          <h1 className="heading-xl font-montserrat font-bold text-4xl md:text-5xl text-[#0F172A] mb-4">
             Business Growth <span className="text-[#F97316]">Insights</span>
           </h1>
           <p className="text-slate-500 text-lg max-w-2xl mx-auto">

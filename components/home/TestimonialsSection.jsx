@@ -69,7 +69,7 @@ export default function TestimonialsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-montserrat font-black leading-tight tracking-tight mb-3"
+          className="heading-xl font-montserrat font-black leading-tight tracking-tight mb-3"
           style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", color: "#0B0F1A" }}
         >
           What Our <span className="heading">Clients Say</span>
@@ -79,7 +79,7 @@ export default function TestimonialsSection() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-slate-500 font-inter"
+          className="text-gray-800 font-medium"
         >
           Real words from 1000+ business owners who transformed with Arnav Sir.
         </motion.p>

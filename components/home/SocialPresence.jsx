@@ -71,7 +71,7 @@ export default function SocialPresence() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-montserrat font-black leading-tight tracking-tight text-[var(--dark)]"
+            className="heading-xl font-montserrat font-black leading-tight tracking-tight text-[var(--dark)]"
             style={{
               fontSize: "clamp(1.6rem, 4vw, 2.6rem)",
             }}

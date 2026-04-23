@@ -326,7 +326,7 @@ export default function Footer() {
                   <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-white/5 flex-shrink-0">
                     <MapPin size={13} className="text-[#F97316]" />
                   </div>
-                  S. No. 01/840/5 Tapovan Road, Dwarka, Nashik-422011.
+                  Canada Corner, Nashik 
                 </span>
               </li>
             </ul>

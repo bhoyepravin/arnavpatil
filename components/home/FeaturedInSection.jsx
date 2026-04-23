@@ -43,7 +43,7 @@ export default function FeaturedInSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="font-montserrat font-black text-[var(--dark)] leading-tight mb-6"
+            className="heading-xl font-montserrat font-black text-[var(--dark)] leading-tight mb-6"
             style={{ fontSize: "clamp(1.8rem,3.3vw,2.6rem)" }}
           >
             As Featured In: <br />
@@ -55,7 +55,7 @@ export default function FeaturedInSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-[var(--gray)] max-w-xl font-inter text-sm sm:text-base leading-relaxed"
+            className="text-gray-800 max-w-xl font-medium text-sm sm:text-base leading-relaxed"
           >
             Recognized by leading business media houses for excellence in
             innovation, leadership, and transforming entrepreneurial success

@@ -149,15 +149,15 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 const testimonials = [
   {
     id: 1,
-    video: "https://www.youtube.com/embed/oSzMps4GhcQ",
+    video: "/testimonials/miss_divya_chaudhari.mp4",
   },
   {
     id: 2,
-    video: "https://www.youtube.com/embed/_YszSMpla3s",
+    video: "/testimonials/mr_rahul_dindorkar.mp4",     
   },
   {
     id: 3,
-    video: "https://www.youtube.com/embed/RUt9ZFntWq4",
+    video: "/testimonials/mr_avinash_kharote.mp4",
   },
 ];
 

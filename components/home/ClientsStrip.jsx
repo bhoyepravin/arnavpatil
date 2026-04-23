@@ -46,7 +46,7 @@ export default function ClientsStrip() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-slate-400 text-xs font-montserrat font-bold uppercase tracking-widest mb-3"
+          className="text-gray-800 text-xs font-montserrat font-medium uppercase tracking-widest mb-3"
         >
           Trusted by business owners across India
         </motion.p>
@@ -55,7 +55,7 @@ export default function ClientsStrip() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-montserrat font-black text-[#0B0F1A] mb-2"
+          className="heading-xl font-montserrat font-black text-[#0B0F1A] mb-2"
           style={{ fontSize: "clamp(1.5rem, 3vw, 2.2rem)" }}
         >
           1000+ Businesses <span className="heading">Transformed</span>

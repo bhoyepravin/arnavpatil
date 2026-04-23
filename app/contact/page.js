@@ -206,7 +206,7 @@ export default function ContactPage() {
         <div className="max-w-3xl mx-auto">
           <span className="section-label mb-4 sm:mb-5 inline-flex">Contact Us</span>
           <h1
-            className="font-montserrat font-extrabold leading-tight mb-4 sm:mb-5"
+            className="heading-xl font-montserrat font-extrabold leading-tight mb-4 sm:mb-5"
             style={{ fontSize: "clamp(1.8rem, 5vw, 3rem)", color: "var(--dark)" }}
           >
             Let's Start Your{" "} <span className="heading">Transformation</span>

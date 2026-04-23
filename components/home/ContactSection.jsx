@@ -25,7 +25,7 @@ export default function ContactSection() {
                 Contact Us
               </span>
 
-              <h2 className="font-montserrat font-black text-[clamp(1.6rem,3vw,2.4rem)] text-[var(--dark)] leading-tight">
+              <h2 className="heading-xl font-montserrat font-black text-[clamp(1.6rem,3vw,2.4rem)] text-[var(--dark)] leading-tight">
                 Request for <span className="heading font-bold">Consulting</span>
               </h2>
             </div>

@@ -186,7 +186,7 @@ export default function AboutCoachSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="font-montserrat font-black text-[var(--dark)] leading-tight mb-8"
+            className="heading-xl font-montserrat font-black text-[var(--dark)] leading-tight mb-8"
             style={{ fontSize: "clamp(2rem, 4vw, 3.2rem)" }}
           >
              Transform Business<br />

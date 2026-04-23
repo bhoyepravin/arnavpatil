@@ -130,27 +130,35 @@ export default function StatsSection() {
   return (
     <section 
       ref={sectionRef}
-      className="w-full py-20 bg-[var(--off-white)] border-t border-[var(--gray-border)]"
+      className="w-full py-12 sm:py-16 md:py-20 lg:py-24 bg-[var(--off-white)] border-t border-[var(--gray-border)]"
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 text-center">
-        {stats.map((stat) => (
-          <div
-            key={stat.id}
-            className="flex flex-col items-center gap-4 animate-[fade-in-up_0.8s_ease-out]"
-          >
-            <div className="w-16 h-16 flex items-center justify-center rounded-2xl bg-[var(--orange-pale)] border border-[var(--orange-light)] shadow-sm">
-              {stat.icon}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        {/* Responsive Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 md:gap-12 text-center">
+          {stats.map((stat) => (
+            <div
+              key={stat.id}
+              className="flex flex-col items-center gap-3 sm:gap-4 animate-[fade-in-up_0.8s_ease-out] px-4 sm:px-0"
+            >
+              {/* Icon Container - Responsive sizing */}
+              <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 flex items-center justify-center rounded-2xl bg-[var(--orange-pale)] border border-[var(--orange-light)] shadow-sm">
+                <div className="scale-90 sm:scale-100">
+                  {stat.icon}
+                </div>
+              </div>
+
+              {/* Number Value - Responsive text size */}
+              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--dark)] font-montserrat">
+                {formatNumber(counts[stat.id], stat.suffix)}
+              </h3>
+
+              {/* Label - Responsive text size */}
+              <p className="text-sm sm:text-base md:text-lg text-[var(--gray)] font-inter max-w-[200px] sm:max-w-none mx-auto">
+                {stat.label}
+              </p>
             </div>
-
-            <h3 className="text-4xl font-bold text-[var(--dark)] font-montserrat">
-              {formatNumber(counts[stat.id], stat.suffix)}
-            </h3>
-
-            <p className="text-[var(--gray)] text-base font-inter">
-              {stat.label}
-            </p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

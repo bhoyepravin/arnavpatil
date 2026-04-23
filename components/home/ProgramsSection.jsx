@@ -349,14 +349,14 @@ export default function ProgramsSection() {
           </span>
 
           <h2
-            className="font-montserrat font-bold leading-tight text-[var(--dark)]"
-            style={{ fontSize: "clamp(1.6rem, 4vw, 2.6rem)" }}
-          >
-            Coaching Programs{" "}
-            <span className="heading">
-              Built for Results
-            </span>
-          </h2>
+  className="heading-xl font-montserrat leading-tight text-[var(--dark)]"
+  style={{ fontSize: "clamp(1.6rem, 4vw, 2.6rem)" }}
+>
+  Coaching Programs{" "}
+  <span className="heading">
+    Built for Results
+  </span>
+</h2>
         </div>
 
         {/* Dynamic Tabs - Auto updates from data with custom order */}

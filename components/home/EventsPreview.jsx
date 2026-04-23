@@ -35,7 +35,7 @@ export default function EventsPreview() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="font-montserrat font-extrabold leading-tight tracking-tight"
+              className="heading-xl font-montserrat font-extrabold leading-tight tracking-tight"
               style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", color: "#0F172A" }}
             >
               Upcoming{" "}
