@@ -496,10 +496,10 @@ export default function AboutPage() {
               <FaWhatsapp size={17} className="mr-2" /> Book on WhatsApp
             </a>
             <Link 
-              href="/programs" 
+              href="/contact" 
               className="btn-secondary inline-flex items-center justify-center text-sm sm:text-base py-3 sm:py-3.5 px-6 sm:px-8"
             >
-              View Programs <ArrowRight size={15} className="ml-2" />
+              Book Consultation <ArrowRight size={15} className="ml-2" />
             </Link>
           </div>
         </div>

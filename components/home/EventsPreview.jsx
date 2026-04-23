@@ -7,8 +7,8 @@ import { events } from "@/lib/data";
 
 const badgeStyle = {
   "Flagship Event": { bg: "bg-orange-100 text-orange-700" },
-  "Free Event":     { bg: "bg-emerald-100 text-emerald-700" },
-  "Premium Event":  { bg: "bg-[#0891B2]/10 text-[#0891B2]" },
+  "Free Event":     { bg: "bg-orange-100 text-orange-700" },
+  "Premium Event":  { bg: "bg-orange-100 text-orange-700" },
 };
 
 export default function EventsPreview() {
@@ -72,8 +72,8 @@ export default function EventsPreview() {
                       background: i === 0
                         ? "linear-gradient(135deg, #F97316, #EA580C)"
                         : i === 1
-                        ? "linear-gradient(135deg, #10B981, #059669)"
-                        : "linear-gradient(135deg, #0891B2, #0E7490)",
+                        ? "linear-gradient(135deg, #EA580C, #EA580C)"
+                        : "linear-gradient(135deg, #EA580C, #EA580C)",
                     }}
                   >
                     <span className="text-white text-xl font-extrabold font-montserrat leading-none">{day}</span>

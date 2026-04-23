@@ -191,7 +191,7 @@ export default function Testimonials() {
 </h2>
 
           <p className="text-white/80 font-medium text-sm sm:text-base mt-3 leading-relaxed">
-            Real transformations, real results. Watch success stories from business owners who have worked with Arnav Patil.
+            Real transformations, real results. Watch success stories from business owners who have worked with Mr. Arnav Patil.
           </p> 
 
           {/* Optional: Add a small stat or quote */}
@@ -206,7 +206,7 @@ export default function Testimonials() {
                 </div>
               ))}
             </div>
-            <p className="text-white/70 text-xs sm:text-sm">500+ Success Stories</p>
+            <p className="text-white/70 text-xs sm:text-sm">1000+ Success Stories</p>
           </div>
         </div>
 

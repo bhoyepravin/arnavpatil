@@ -29,7 +29,7 @@ const items = [
 
 export default function FreeHelpSection() {
   return (
-    <section className="w-full py-16 sm:py-20 lg:py-28 bg-[var(--off-white)]">
+    <section className="w-full py-10 sm:py-20 lg:py-28 bg-[var(--off-white)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
         {/* Heading */}
@@ -46,8 +46,8 @@ export default function FreeHelpSection() {
         </motion.h2>
 
         {/* Subheading */}
-        <p className="font-montserrat text-lg sm:text-xl tracking-wide text-[var(--dark-2)] mb-3">
-          READ. INSIGHTS. WATCH  
+        <p className="font-montserrat uppercase text-lg sm:text-xl tracking-wide text-[var(--dark-2)] mb-3">
+          Listen. Watch. Read
         </p>
 
         <p className="text-gray-800 font-medium text-sm sm:text-base max-w-2xl mx-auto mb-12">

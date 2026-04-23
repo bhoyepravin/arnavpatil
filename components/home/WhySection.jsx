@@ -5,7 +5,7 @@ import { whyChoose } from "@/lib/data";
 
 export default function WhySection() {
   return (
-    <section className="py-24 lg:py-32 bg-white overflow-hidden">
+    <section className="py-24 lg:py-32 bg-gray-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
         {/* Header */}
@@ -41,7 +41,7 @@ export default function WhySection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.55, delay: i * 0.09 }}
-              className="group relative p-7 rounded-2xl border border-slate-100 hover:border-[#F97316]/30 bg-white hover:shadow-xl overflow-hidden transition-all duration-400"
+              className="group relative p-7 rounded-2xl border border-gray-400 hover:border-[#F97316]/30 bg-white hover:shadow-xl overflow-hidden transition-all duration-400"
             >
               {/* Hover accent */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#480A62] to-[#480A62] scale-x-0 group-hover:scale-x-100 transition-transform duration-400 origin-left" />

@@ -38,12 +38,12 @@ export default function ContactSection() {
                 <input
                   type="text"
                   placeholder="Your Name"
-                  className="w-full px-4 py-3 rounded-lg border border-[var(--gray-border)] bg-[var(--white)] focus:outline-none focus:border-[var(--orange)] transition"
+                  className="w-full px-4 py-3 rounded-lg border border-[var(--gray)] bg-[var(--white)] focus:outline-none focus:border-[var(--orange)] transition"
                 />
                 <input
                   type="email"
                   placeholder="Your Email"
-                  className="w-full px-4 py-3 rounded-lg border border-[var(--gray-border)] bg-[var(--white)] focus:outline-none focus:border-[var(--orange)] transition"
+                  className="w-full px-4 py-3 rounded-lg border border-[var(--gray)] bg-[var(--white)] focus:outline-none focus:border-[var(--orange)] transition"
                 />
               </div>
 
@@ -52,24 +52,38 @@ export default function ContactSection() {
                 <input
                   type="tel"
                   placeholder="Your Phone"
-                  className="w-full px-4 py-3 rounded-lg border border-[var(--gray-border)] bg-[var(--white)] focus:outline-none focus:border-[var(--orange)] transition"
+                  className="w-full px-4 py-3 rounded-lg border border-[var(--gray)] bg-[var(--white)] focus:outline-none focus:border-[var(--orange)] transition"
                 />
 
-                <select
-                  className="w-full px-4 py-3 rounded-lg border border-[var(--gray-border)] bg-[var(--white)] text-[var(--gray)] focus:outline-none focus:border-[var(--orange)] transition"
-                >
-                  <option>Physical Training</option>
-                  <option>Online Business Training </option>
-                  <option>One-to-One Business Consultation  </option>
-                  <option>Online One-to-One Business Consultation </option>
-                </select>
+                <div className="relative w-full">
+    <select
+      className="block w-full px-4 py-3 rounded-lg border border-[var(--gray)] bg-[var(--white)]
+                 text-[var(--gray)] focus:outline-none focus:border-[var(--orange)] transition
+                 relative z-[60] appearance-none"
+      defaultValue=""
+    >
+      <option value="" disabled>
+        Select a service for consultation
+      </option>
+
+      <option>Physical Business Training</option>
+      <option>Online Business Training</option>
+      <option>One-to-One Business Consultation</option>
+      <option>Online One-to-One Business Consultation</option>
+    </select>
+
+    {/* Custom Dropdown Arrow */}
+    <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm">
+      ▼
+    </span>
+  </div>
               </div>
 
               {/* Message */}
               <textarea
                 rows="4"
                 placeholder="Message"
-                className="w-full px-4 py-3 rounded-lg border border-[var(--gray-border)] bg-[var(--white)] focus:outline-none focus:border-[var(--orange)] transition resize-none"
+                className="w-full px-4 py-3 rounded-lg border border-[var(--gray)] bg-[var(--white)] focus:outline-none focus:border-[var(--orange)] transition resize-none"
               />
 
               {/* Submit */}

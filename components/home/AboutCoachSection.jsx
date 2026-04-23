@@ -128,11 +128,31 @@ import { useRouter } from "next/navigation"; // ✅ add this
 export default function AboutCoachSection() {
    const router = useRouter(); // ✅ initialize
   return (
-    <section className="w-full py-16 sm:py-20 lg:py-28 bg-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+    <section className="w-full py-2 sm:py-20 lg:py-28 bg-white relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-6 lg:gap-20 items-center">
+        {/* MOBILE + TABLET HEADING */}
+<div className="lg:hidden mb-8 relative z-10">
+  <div className="flex items-center gap-3 mb-3">
+    <div className="w-10 sm:w-12 h-[2px] bg-[var(--orange)]" />
+    <span className="uppercase tracking-widest text-xs sm:text-sm font-semibold text-gray-800">
+      Who Am I?
+    </span>
+  </div>
 
+  <h1
+    className="font-montserrat font-black leading-tight text-[var(--dark)]
+               text-[clamp(1.8rem,6vw,2.4rem)]"
+  >
+    Who is{" "}
+    <span className="heading block text-[var(--orange)]">
+      Mr. Arnav Patil
+    </span>
+  </h1>
+</div>
         {/* LEFT IMAGE SECTION */}
         <div className="relative w-full flex justify-center lg:justify-start">
+
+          
           
           {/* Textured Background Layer (The grey pattern behind the image) */}
           <div 
@@ -144,6 +164,8 @@ export default function AboutCoachSection() {
               border: "1px solid #e0e0e0"
             }}
           />
+
+          
 
           {/* Main Image Wrapper */}
           <div className="relative z-10 w-full max-w-md lg:max-w-full aspect-[4/5] shadow-2xl overflow-hidden bg-white">
@@ -175,10 +197,10 @@ export default function AboutCoachSection() {
             viewport={{ once: true }}
             className="flex items-center gap-4 mb-6"
           >
-            <div className="w-12 h-[2px] bg-[var(--orange)]" />
-            <span className="heading font-bold uppercase tracking-[0.2em] text-sm font-montserrat">
-              Who Am I?
-            </span>
+            <div className="hidden md:block w-12 h-[2px] bg-[var(--orange)]" />
+<span className="hidden md:block heading font-bold uppercase tracking-[0.2em] text-sm font-montserrat">
+  Who Am I?
+</span>
           </motion.div>
 
           <motion.h2
@@ -220,10 +242,7 @@ export default function AboutCoachSection() {
         </div>
       </div>
 
-      {/* BACK TO TOP BUTTON (Bottom Left) */}
-      <div className="absolute bottom-6 left-6 hidden lg:flex w-12 h-12 bg-[var(--orange)] items-center justify-center rounded-full text-white shadow-xl cursor-pointer hover:bg-[var(--orange-dark)] transition-colors">
-        <ArrowUp size={24} />
-      </div>
+      
     </section>
   );
 }
