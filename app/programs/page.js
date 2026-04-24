@@ -406,7 +406,7 @@ export default function ProgramsPage() {
       ].map((item, idx) => (
         <div
           key={idx}
-          className="bg-white p-5 sm:p-6 rounded-2xl text-center hover:shadow-lg transition-all duration-300 group"
+          className="bg-white p-5 sm:p-6 rounded-2xl border border-gray-400 text-center hover:shadow-lg transition-all duration-300 group"
         >
           <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-orange-50 flex items-center justify-center group-hover:bg-orange-100 transition-colors duration-300">
             <item.icon size={28} className="text-[#F97316]" />

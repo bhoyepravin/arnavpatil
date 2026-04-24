@@ -617,7 +617,7 @@ export default function EventsPage() {
             ].map((item, idx) => (
               <div
                 key={idx}
-                className="text-center p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-orange-50 to-white hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group"
+                className="text-center p-5 sm:p-6 rounded-2xl border border-gray-400 bg-gradient-to-br from-orange-50 to-white hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group"
               >
                 <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-orange-100 flex items-center justify-center group-hover:bg-orange-200 transition-colors">
                   <item.icon size={28} className="text-[#F97316]" />

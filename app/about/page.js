@@ -445,7 +445,7 @@ export default function AboutPage() {
       {whyChoose.map((item, i) => (
         <div
           key={i}
-          className="group p-5 sm:p-7 rounded-3xl border-3 border-slate-200 hover:border-orange-200 hover:shadow-md transition-all duration-300 bg-white hover:bg-gradient-to-br hover:from-white hover:to-orange-50/30"
+          className="group p-5 sm:p-7 rounded-3xl border border-gray-400 hover:border-orange-200 hover:shadow-md transition-all duration-300 bg-white hover:bg-gradient-to-br hover:from-white hover:to-orange-50/30"
         >
           {/* Subtle accent line on hover */}
           <div className="w-20 h-0.5 bg-gradient-to-r from-[#480A62] to-[#480A62] mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

@@ -7,31 +7,31 @@ import { Calendar, Award, TrendingUp, Users, Rocket, Star } from "lucide-react";
 const timeline = [
   {
     year: "2020",
-    event: "Founded Arnasoft with a vision to revolutionize business automation and coaching for small business owners.",
+    event: "Founded Arnasoft with a clear vision to transform business automation and coaching for small business owners.",
     icon: Rocket,
     color: "orange"
   },
   {
     year: "2021",
-    event: "Launched first flagship program 'Business Scaling Program' helping 100+ business owners transform their operations.",
+    event: "Launched the flagship Business Scaling Program, helping over 100 business owners improve operations and achieve consistent growth.",
     icon: TrendingUp,
     color: "teal"
   },
   {
     year: "2022",
-    event: "Expanded to 3 cities with 500+ successful transformations and 1M+ YouTube views.",
+    event: "Expanded operations to three major cities, achieving 500 successful transformations and gaining over one million YouTube views.",
     icon: Users,
     color: "orange"
   },
   {
     year: "2023",
-    event: "Recognized as Top Business Coach in Maharashtra and launched Jewellers Masterclass.",
+    event: "Recognized as a top business coach in Maharashtra and successfully launched the specialized Jewellers Masterclass program.",
     icon: Award,
     color: "teal"
   },
   {
     year: "2024",
-    event: "Reached 1000+ business transformations and expanded international presence.",
+    event: "Achieved more than 1000 business transformations while expanding global presence and building strong international client relationships.",
     icon: Star,
     color: "orange"
   }
@@ -46,7 +46,7 @@ export default function TimelineSection() {
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#F97316]/5 rounded-full blur-3xl" />
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#0891B2]/5 rounded-full blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#480A62]/5 rounded-full blur-3xl" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-r from-transparent via-[#F97316]/3 to-transparent blur-xl" />
       </div>
 
@@ -81,7 +81,7 @@ export default function TimelineSection() {
             initial={{ height: 0 }}
             animate={isInView ? { height: "100%" } : { height: 0 }}
             transition={{ duration: 1.5, ease: "easeOut" }}
-            className="hidden sm:block absolute left-6 md:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#F97316] via-[#0891B2] to-[#F97316] rounded-full"
+            className="hidden sm:block absolute left-6 md:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#F97316] via-[#480A62] to-[#F97316] rounded-full"
           />
 
           <div className="space-y-5 sm:space-y-8">
@@ -101,7 +101,7 @@ export default function TimelineSection() {
                   style={{
                     background: item.color === "orange"
                       ? "linear-gradient(135deg, #F97316, #EA580C)"
-                      : "linear-gradient(135deg, #0891B2, #0E7490)",
+                      : "linear-gradient(135deg, #480A62, #480A62)",
                   }}
                 >
                   {/* Animated background shine */}
@@ -124,12 +124,12 @@ export default function TimelineSection() {
                     style={{
                       background: item.color === "orange"
                         ? "linear-gradient(180deg, #F97316, #EA580C)"
-                        : "linear-gradient(180deg, #0891B2, #0E7490)",
+                        : "linear-gradient(180deg, #480A62, #480A62)",
                     }}
                   />
                   
                   {/* Year on mobile */}
-                  <div className="sm:hidden text-xs font-bold mb-2" style={{ color: item.color === "orange" ? "#F97316" : "#0891B2" }}>
+                  <div className="sm:hidden text-xs font-bold mb-2" style={{ color: item.color === "orange" ? "#F97316" : "#480A62" }}>
                     {item.year}
                   </div>
                   
@@ -138,8 +138,8 @@ export default function TimelineSection() {
                   </p>
                   
                   {/* Optional: Read more link */}
-                  <button className="mt-3 text-xs font-semibold opacity-0 group-hover/card:opacity-100 transition-opacity duration-300" style={{ color: item.color === "orange" ? "#F97316" : "#0891B2" }}>
-                    Read more →
+                  <button className="mt-3 text-xs font-semibold opacity-0 group-hover/card:opacity-100 transition-opacity duration-300" style={{ color: item.color === "orange" ? "#F97316" : "#480A62" }}>
+                    {/* Read more → */}
                   </button>
                 </motion.div>
               </motion.div>
