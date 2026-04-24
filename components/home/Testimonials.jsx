@@ -235,7 +235,7 @@ export default function Testimonials() {
                 bg-black
               "
               style={{ aspectRatio: "9/16" }}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
           </div>
